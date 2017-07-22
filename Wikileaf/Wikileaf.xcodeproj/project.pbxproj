@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277101F23868F006CB38E /* AppDelegate.swift */; };
+		EE8277131F23868F006CB38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277121F23868F006CB38E /* ViewController.swift */; };
+		EE8277161F23868F006CB38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8277141F23868F006CB38E /* Main.storyboard */; };
+		EE8277181F23868F006CB38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8277171F23868F006CB38E /* Assets.xcassets */; };
+		EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8277191F23868F006CB38E /* LaunchScreen.storyboard */; };
+		EE8277261F23868F006CB38E /* WikileafTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277251F23868F006CB38E /* WikileafTests.swift */; };
+		EE8277311F23868F006CB38E /* WikileafUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277301F23868F006CB38E /* WikileafUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE8277221F23868F006CB38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE8277051F23868F006CB38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE82770C1F23868F006CB38E;
+			remoteInfo = Wikileaf;
+		};
+		EE82772D1F23868F006CB38E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE8277051F23868F006CB38E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE82770C1F23868F006CB38E;
+			remoteInfo = Wikileaf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE82770D1F23868F006CB38E /* Wikileaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikileaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8277101F23868F006CB38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE8277121F23868F006CB38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE8277151F23868F006CB38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE8277171F23868F006CB38E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE82771A1F23868F006CB38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE82771C1F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8277211F23868F006CB38E /* WikileafTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikileafTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8277251F23868F006CB38E /* WikileafTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikileafTests.swift; sourceTree = "<group>"; };
+		EE8277271F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE82772C1F23868F006CB38E /* WikileafUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikileafUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8277301F23868F006CB38E /* WikileafUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikileafUITests.swift; sourceTree = "<group>"; };
+		EE8277321F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE82770A1F23868F006CB38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE82771E1F23868F006CB38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8277291F23868F006CB38E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE8277041F23868F006CB38E = {
+			isa = PBXGroup;
+			children = (
+				EE82770F1F23868F006CB38E /* Wikileaf */,
+				EE8277241F23868F006CB38E /* WikileafTests */,
+				EE82772F1F23868F006CB38E /* WikileafUITests */,
+				EE82770E1F23868F006CB38E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE82770E1F23868F006CB38E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE82770D1F23868F006CB38E /* Wikileaf.app */,
+				EE8277211F23868F006CB38E /* WikileafTests.xctest */,
+				EE82772C1F23868F006CB38E /* WikileafUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE82770F1F23868F006CB38E /* Wikileaf */ = {
+			isa = PBXGroup;
+			children = (
+				EE8277101F23868F006CB38E /* AppDelegate.swift */,
+				EE8277121F23868F006CB38E /* ViewController.swift */,
+				EE8277141F23868F006CB38E /* Main.storyboard */,
+				EE8277171F23868F006CB38E /* Assets.xcassets */,
+				EE8277191F23868F006CB38E /* LaunchScreen.storyboard */,
+				EE82771C1F23868F006CB38E /* Info.plist */,
+			);
+			path = Wikileaf;
+			sourceTree = "<group>";
+		};
+		EE8277241F23868F006CB38E /* WikileafTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE8277251F23868F006CB38E /* WikileafTests.swift */,
+				EE8277271F23868F006CB38E /* Info.plist */,
+			);
+			path = WikileafTests;
+			sourceTree = "<group>";
+		};
+		EE82772F1F23868F006CB38E /* WikileafUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE8277301F23868F006CB38E /* WikileafUITests.swift */,
+				EE8277321F23868F006CB38E /* Info.plist */,
+			);
+			path = WikileafUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE82770C1F23868F006CB38E /* Wikileaf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8277351F23868F006CB38E /* Build configuration list for PBXNativeTarget "Wikileaf" */;
+			buildPhases = (
+				EE8277091F23868F006CB38E /* Sources */,
+				EE82770A1F23868F006CB38E /* Frameworks */,
+				EE82770B1F23868F006CB38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wikileaf;
+			productName = Wikileaf;
+			productReference = EE82770D1F23868F006CB38E /* Wikileaf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE8277201F23868F006CB38E /* WikileafTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE8277381F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafTests" */;
+			buildPhases = (
+				EE82771D1F23868F006CB38E /* Sources */,
+				EE82771E1F23868F006CB38E /* Frameworks */,
+				EE82771F1F23868F006CB38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE8277231F23868F006CB38E /* PBXTargetDependency */,
+			);
+			name = WikileafTests;
+			productName = WikileafTests;
+			productReference = EE8277211F23868F006CB38E /* WikileafTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE82772B1F23868F006CB38E /* WikileafUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE82773B1F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafUITests" */;
+			buildPhases = (
+				EE8277281F23868F006CB38E /* Sources */,
+				EE8277291F23868F006CB38E /* Frameworks */,
+				EE82772A1F23868F006CB38E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE82772E1F23868F006CB38E /* PBXTargetDependency */,
+			);
+			name = WikileafUITests;
+			productName = WikileafUITests;
+			productReference = EE82772C1F23868F006CB38E /* WikileafUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE8277051F23868F006CB38E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ZestyGuys;
+				TargetAttributes = {
+					EE82770C1F23868F006CB38E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4MG29UU9R3;
+						ProvisioningStyle = Automatic;
+					};
+					EE8277201F23868F006CB38E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4MG29UU9R3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE82770C1F23868F006CB38E;
+					};
+					EE82772B1F23868F006CB38E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4MG29UU9R3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE82770C1F23868F006CB38E;
+					};
+				};
+			};
+			buildConfigurationList = EE8277081F23868F006CB38E /* Build configuration list for PBXProject "Wikileaf" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE8277041F23868F006CB38E;
+			productRefGroup = EE82770E1F23868F006CB38E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE82770C1F23868F006CB38E /* Wikileaf */,
+				EE8277201F23868F006CB38E /* WikileafTests */,
+				EE82772B1F23868F006CB38E /* WikileafUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE82770B1F23868F006CB38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */,
+				EE8277181F23868F006CB38E /* Assets.xcassets in Resources */,
+				EE8277161F23868F006CB38E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE82771F1F23868F006CB38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE82772A1F23868F006CB38E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE8277091F23868F006CB38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8277131F23868F006CB38E /* ViewController.swift in Sources */,
+				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE82771D1F23868F006CB38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8277261F23868F006CB38E /* WikileafTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE8277281F23868F006CB38E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE8277311F23868F006CB38E /* WikileafUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE8277231F23868F006CB38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE82770C1F23868F006CB38E /* Wikileaf */;
+			targetProxy = EE8277221F23868F006CB38E /* PBXContainerItemProxy */;
+		};
+		EE82772E1F23868F006CB38E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE82770C1F23868F006CB38E /* Wikileaf */;
+			targetProxy = EE82772D1F23868F006CB38E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE8277141F23868F006CB38E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8277151F23868F006CB38E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE8277191F23868F006CB38E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE82771A1F23868F006CB38E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE8277331F23868F006CB38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE8277341F23868F006CB38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE8277361F23868F006CB38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = Wikileaf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.Wikileaf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE8277371F23868F006CB38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = Wikileaf/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.Wikileaf;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EE8277391F23868F006CB38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = WikileafTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.WikileafTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wikileaf.app/Wikileaf";
+			};
+			name = Debug;
+		};
+		EE82773A1F23868F006CB38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = WikileafTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.WikileafTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wikileaf.app/Wikileaf";
+			};
+			name = Release;
+		};
+		EE82773C1F23868F006CB38E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = WikileafUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.WikileafUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Wikileaf;
+			};
+			name = Debug;
+		};
+		EE82773D1F23868F006CB38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4MG29UU9R3;
+				INFOPLIST_FILE = WikileafUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baggy.WikileafUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Wikileaf;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE8277081F23868F006CB38E /* Build configuration list for PBXProject "Wikileaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8277331F23868F006CB38E /* Debug */,
+				EE8277341F23868F006CB38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE8277351F23868F006CB38E /* Build configuration list for PBXNativeTarget "Wikileaf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8277361F23868F006CB38E /* Debug */,
+				EE8277371F23868F006CB38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE8277381F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE8277391F23868F006CB38E /* Debug */,
+				EE82773A1F23868F006CB38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE82773B1F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE82773C1F23868F006CB38E /* Debug */,
+				EE82773D1F23868F006CB38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE8277051F23868F006CB38E /* Project object */;
+}
