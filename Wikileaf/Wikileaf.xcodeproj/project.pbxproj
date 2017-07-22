@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13A3E4C83E362A85D5E8D9C8 /* Pods_Wikileaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */; };
 		EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277101F23868F006CB38E /* AppDelegate.swift */; };
 		EE8277131F23868F006CB38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277121F23868F006CB38E /* ViewController.swift */; };
 		EE8277161F23868F006CB38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8277141F23868F006CB38E /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		462CE65F133BDA326D9E98EF /* Pods-Wikileaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wikileaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf.release.xcconfig"; sourceTree = "<group>"; };
+		4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wikileaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A412D66BF6FF977FC36F1B86 /* Pods-Wikileaf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wikileaf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf.debug.xcconfig"; sourceTree = "<group>"; };
 		EE82770D1F23868F006CB38E /* Wikileaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikileaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8277101F23868F006CB38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8277121F23868F006CB38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A3E4C83E362A85D5E8D9C8 /* Pods_Wikileaf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DA4A26869A355973C2643C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		921DAB9198E9D6C8402BFF4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A412D66BF6FF977FC36F1B86 /* Pods-Wikileaf.debug.xcconfig */,
+				462CE65F133BDA326D9E98EF /* Pods-Wikileaf.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EE8277041F23868F006CB38E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				EE8277241F23868F006CB38E /* WikileafTests */,
 				EE82772F1F23868F006CB38E /* WikileafUITests */,
 				EE82770E1F23868F006CB38E /* Products */,
+				921DAB9198E9D6C8402BFF4F /* Pods */,
+				7DA4A26869A355973C2643C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE8277351F23868F006CB38E /* Build configuration list for PBXNativeTarget "Wikileaf" */;
 			buildPhases = (
+				D6902262B15169F8CE710097 /* [CP] Check Pods Manifest.lock */,
 				EE8277091F23868F006CB38E /* Sources */,
 				EE82770A1F23868F006CB38E /* Frameworks */,
 				EE82770B1F23868F006CB38E /* Resources */,
+				53B559C9A7A1672572126241 /* [CP] Embed Pods Frameworks */,
+				A88F3D7B65545943CADE2F3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53B559C9A7A1672572126241 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A88F3D7B65545943CADE2F3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6902262B15169F8CE710097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE8277091F23868F006CB38E /* Sources */ = {
@@ -415,6 +490,7 @@
 		};
 		EE8277361F23868F006CB38E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A412D66BF6FF977FC36F1B86 /* Pods-Wikileaf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4MG29UU9R3;
@@ -428,6 +504,7 @@
 		};
 		EE8277371F23868F006CB38E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462CE65F133BDA326D9E98EF /* Pods-Wikileaf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4MG29UU9R3;
