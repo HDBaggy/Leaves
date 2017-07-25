@@ -15,6 +15,10 @@
 		EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8277191F23868F006CB38E /* LaunchScreen.storyboard */; };
 		EE8277261F23868F006CB38E /* WikileafTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277251F23868F006CB38E /* WikileafTests.swift */; };
 		EE8277311F23868F006CB38E /* WikileafUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277301F23868F006CB38E /* WikileafUITests.swift */; };
+		EE82773F1F239038006CB38E /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82773E1F239038006CB38E /* DrawerViewController.swift */; };
+		EE8277411F249150006CB38E /* HDDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277401F249150006CB38E /* HDDrawerView.swift */; };
+		EE8277431F27BEE1006CB38E /* DrawerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */; };
+		EE8277451F27C1BF006CB38E /* ClsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277441F27C1BF006CB38E /* ClsDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		EE82772C1F23868F006CB38E /* WikileafUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikileafUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8277301F23868F006CB38E /* WikileafUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikileafUITests.swift; sourceTree = "<group>"; };
 		EE8277321F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE82773E1F239038006CB38E /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		EE8277401F249150006CB38E /* HDDrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDDrawerView.swift; sourceTree = "<group>"; };
+		EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerDetailCell.swift; sourceTree = "<group>"; };
+		EE8277441F27C1BF006CB38E /* ClsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				EE8277101F23868F006CB38E /* AppDelegate.swift */,
+				EE82773E1F239038006CB38E /* DrawerViewController.swift */,
+				EE8277441F27C1BF006CB38E /* ClsDetail.swift */,
 				EE8277121F23868F006CB38E /* ViewController.swift */,
 				EE8277141F23868F006CB38E /* Main.storyboard */,
 				EE8277171F23868F006CB38E /* Assets.xcassets */,
 				EE8277191F23868F006CB38E /* LaunchScreen.storyboard */,
 				EE82771C1F23868F006CB38E /* Info.plist */,
+				EE8277401F249150006CB38E /* HDDrawerView.swift */,
+				EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */,
 			);
 			path = Wikileaf;
 			sourceTree = "<group>";
@@ -338,7 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8277131F23868F006CB38E /* ViewController.swift in Sources */,
+				EE8277451F27C1BF006CB38E /* ClsDetail.swift in Sources */,
+				EE8277411F249150006CB38E /* HDDrawerView.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
+				EE82773F1F239038006CB38E /* DrawerViewController.swift in Sources */,
+				EE8277431F27BEE1006CB38E /* DrawerDetailCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +609,7 @@
 				EE8277371F23868F006CB38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE8277381F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafTests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +618,7 @@
 				EE82773A1F23868F006CB38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE82773B1F23868F006CB38E /* Build configuration list for PBXNativeTarget "WikileafUITests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +627,7 @@
 				EE82773D1F23868F006CB38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
