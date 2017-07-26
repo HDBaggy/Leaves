@@ -73,6 +73,10 @@ class HDDrawerView: UIView, UIGestureRecognizerDelegate {
 //                        print("So Setting to that position")
                     } else {
 //                        print("No")
+                        
+                        if self.frame.origin.y >= self.arrSupportedVerticalGaps.min()! {
+                            finalGap = self.arrSupportedVerticalGaps.min()!
+                        }
                     }
                     
                 } else {
@@ -85,6 +89,10 @@ class HDDrawerView: UIView, UIGestureRecognizerDelegate {
                         break
                     } else {
 //                        print("No")
+                        
+                        if self.frame.origin.y <= self.arrSupportedVerticalGaps.min()! {
+                            finalGap = self.arrSupportedVerticalGaps.max()!
+                        }
                     }
                 }
             }

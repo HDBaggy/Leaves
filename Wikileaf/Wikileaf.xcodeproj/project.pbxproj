@@ -19,6 +19,9 @@
 		EE8277411F249150006CB38E /* HDDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277401F249150006CB38E /* HDDrawerView.swift */; };
 		EE8277431F27BEE1006CB38E /* DrawerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */; };
 		EE8277451F27C1BF006CB38E /* ClsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277441F27C1BF006CB38E /* ClsDetail.swift */; };
+		EE8277471F291441006CB38E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8277461F291441006CB38E /* MapKit.framework */; };
+		EE82774B1F291A17006CB38E /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277491F291A17006CB38E /* PlaceAnnotationView.swift */; };
+		EE82774C1F291A17006CB38E /* PlaceAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE82774A1F291A17006CB38E /* PlaceAnnotationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		EE8277401F249150006CB38E /* HDDrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDDrawerView.swift; sourceTree = "<group>"; };
 		EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerDetailCell.swift; sourceTree = "<group>"; };
 		EE8277441F27C1BF006CB38E /* ClsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsDetail.swift; sourceTree = "<group>"; };
+		EE8277461F291441006CB38E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EE8277491F291A17006CB38E /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		EE82774A1F291A17006CB38E /* PlaceAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceAnnotationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8277471F291441006CB38E /* MapKit.framework in Frameworks */,
 				13A3E4C83E362A85D5E8D9C8 /* Pods_Wikileaf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,6 +97,7 @@
 		7DA4A26869A355973C2643C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE8277461F291441006CB38E /* MapKit.framework */,
 				4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */,
 			);
 			name = Frameworks;
@@ -129,6 +137,7 @@
 		EE82770F1F23868F006CB38E /* Wikileaf */ = {
 			isa = PBXGroup;
 			children = (
+				EE8277481F291A17006CB38E /* AnnotationView */,
 				EE8277101F23868F006CB38E /* AppDelegate.swift */,
 				EE82773E1F239038006CB38E /* DrawerViewController.swift */,
 				EE8277441F27C1BF006CB38E /* ClsDetail.swift */,
@@ -159,6 +168,15 @@
 				EE8277321F23868F006CB38E /* Info.plist */,
 			);
 			path = WikileafUITests;
+			sourceTree = "<group>";
+		};
+		EE8277481F291A17006CB38E /* AnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+				EE8277491F291A17006CB38E /* PlaceAnnotationView.swift */,
+				EE82774A1F291A17006CB38E /* PlaceAnnotationView.xib */,
+			);
+			path = AnnotationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +295,7 @@
 				EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */,
 				EE8277181F23868F006CB38E /* Assets.xcassets in Resources */,
 				EE8277161F23868F006CB38E /* Main.storyboard in Resources */,
+				EE82774C1F291A17006CB38E /* PlaceAnnotationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +370,7 @@
 			files = (
 				EE8277131F23868F006CB38E /* ViewController.swift in Sources */,
 				EE8277451F27C1BF006CB38E /* ClsDetail.swift in Sources */,
+				EE82774B1F291A17006CB38E /* PlaceAnnotationView.swift in Sources */,
 				EE8277411F249150006CB38E /* HDDrawerView.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
 				EE82773F1F239038006CB38E /* DrawerViewController.swift in Sources */,

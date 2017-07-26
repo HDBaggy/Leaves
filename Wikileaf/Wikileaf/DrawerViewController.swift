@@ -12,6 +12,7 @@ class DrawerViewController: UIViewController {
 
     @IBOutlet weak var tblDetails: UITableView!
     var arrDetails:[ClsDetail]!
+    @IBOutlet weak var btnViewMenu: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,9 @@ class DrawerViewController: UIViewController {
 
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 60
+        tblDetails.bounces = false
+        btnViewMenu.layer.masksToBounds = true
+        btnViewMenu.layer.cornerRadius =  4.0
         
         arrDetails = Array()
         
@@ -41,6 +45,10 @@ class DrawerViewController: UIViewController {
         arrDetails.append(objDetail)
         
         tblDetails.reloadData()
+    }
+    
+    @IBAction func btnCloseTapped(_ sender: Any) {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,6 +83,11 @@ extension DrawerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //return max(60, UITableViewAutomaticDimension)
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
