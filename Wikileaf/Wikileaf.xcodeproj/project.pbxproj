@@ -140,6 +140,7 @@
 				EE8277481F291A17006CB38E /* AnnotationView */,
 				EE8277101F23868F006CB38E /* AppDelegate.swift */,
 				EE82773E1F239038006CB38E /* DrawerViewController.swift */,
+				EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */,
 				EE8277441F27C1BF006CB38E /* ClsDetail.swift */,
 				EE8277121F23868F006CB38E /* ViewController.swift */,
 				EE8277141F23868F006CB38E /* Main.storyboard */,
@@ -147,7 +148,6 @@
 				EE8277191F23868F006CB38E /* LaunchScreen.storyboard */,
 				EE82771C1F23868F006CB38E /* Info.plist */,
 				EE8277401F249150006CB38E /* HDDrawerView.swift */,
-				EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */,
 			);
 			path = Wikileaf;
 			sourceTree = "<group>";
