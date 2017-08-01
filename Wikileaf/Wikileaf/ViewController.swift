@@ -25,6 +25,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         objMapView?.setCenter(CLLocationCoordinate2DMake(47.6062, -122.33), animated: false)
         objMapView.addAnnotation(getNewAnnotation())
         addDrawer()
+        
+        
     }
     
     func getNewAnnotation() -> MKPointAnnotation {

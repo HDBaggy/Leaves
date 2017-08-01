@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		13A3E4C83E362A85D5E8D9C8 /* Pods_Wikileaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */; };
+		EE3F74CA1F2FA2C7009AFE4A /* DetailAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74C91F2FA2C7009AFE4A /* DetailAttributeTableViewCell.swift */; };
+		EE3F74CC1F301592009AFE4A /* DetailTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74CB1F301592009AFE4A /* DetailTitleCell.swift */; };
+		EE3F74CE1F3015BD009AFE4A /* DetailReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74CD1F3015BD009AFE4A /* DetailReviewCell.swift */; };
+		EE3F74D01F3015EB009AFE4A /* DetailOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74CF1F3015EB009AFE4A /* DetailOfferCell.swift */; };
+		EE3F74D21F30161B009AFE4A /* DetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74D11F30161B009AFE4A /* DetailDescriptionCell.swift */; };
+		EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D51F30183F009AFE4A /* OpenSans-Bold.ttf */; };
+		EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D61F30183F009AFE4A /* OpenSans-BoldItalic.ttf */; };
+		EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D71F30183F009AFE4A /* OpenSans-ExtraBold.ttf */; };
+		EE3F74E21F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D81F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf */; };
+		EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D91F30183F009AFE4A /* OpenSans-Italic.ttf */; };
+		EE3F74E41F30183F009AFE4A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DA1F30183F009AFE4A /* OpenSans-Light.ttf */; };
+		EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DB1F30183F009AFE4A /* OpenSans-LightItalic.ttf */; };
+		EE3F74E61F30183F009AFE4A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DC1F30183F009AFE4A /* OpenSans-Regular.ttf */; };
+		EE3F74E71F30183F009AFE4A /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DD1F30183F009AFE4A /* OpenSans-SemiBold.ttf */; };
+		EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DE1F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf */; };
+		EE3F74EA1F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74E91F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift */; };
+		EE3F74EC1F301B93009AFE4A /* ClsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74EB1F301B93009AFE4A /* ClsReview.swift */; };
+		EE3F74EE1F3022E2009AFE4A /* ClsOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74ED1F3022E2009AFE4A /* ClsOffer.swift */; };
+		EE3F74F01F3022EC009AFE4A /* ClsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F74EF1F3022EC009AFE4A /* ClsAbout.swift */; };
 		EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277101F23868F006CB38E /* AppDelegate.swift */; };
 		EE8277131F23868F006CB38E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277121F23868F006CB38E /* ViewController.swift */; };
 		EE8277161F23868F006CB38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8277141F23868F006CB38E /* Main.storyboard */; };
@@ -22,6 +41,9 @@
 		EE8277471F291441006CB38E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8277461F291441006CB38E /* MapKit.framework */; };
 		EE82774B1F291A17006CB38E /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277491F291A17006CB38E /* PlaceAnnotationView.swift */; };
 		EE82774C1F291A17006CB38E /* PlaceAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE82774A1F291A17006CB38E /* PlaceAnnotationView.xib */; };
+		EE8277501F2CB39D006CB38E /* DispensaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */; };
+		EE8277521F2D9371006CB38E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8277511F2D9371006CB38E /* HeaderView.xib */; };
+		EE8277541F2D9595006CB38E /* FlexibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277531F2D9595006CB38E /* FlexibleHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +67,25 @@
 		462CE65F133BDA326D9E98EF /* Pods-Wikileaf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wikileaf.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf.release.xcconfig"; sourceTree = "<group>"; };
 		4A27DE4F8BA96C8D99F9DAFC /* Pods_Wikileaf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wikileaf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A412D66BF6FF977FC36F1B86 /* Pods-Wikileaf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wikileaf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wikileaf/Pods-Wikileaf.debug.xcconfig"; sourceTree = "<group>"; };
+		EE3F74C91F2FA2C7009AFE4A /* DetailAttributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAttributeTableViewCell.swift; sourceTree = "<group>"; };
+		EE3F74CB1F301592009AFE4A /* DetailTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTitleCell.swift; sourceTree = "<group>"; };
+		EE3F74CD1F3015BD009AFE4A /* DetailReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailReviewCell.swift; sourceTree = "<group>"; };
+		EE3F74CF1F3015EB009AFE4A /* DetailOfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOfferCell.swift; sourceTree = "<group>"; };
+		EE3F74D11F30161B009AFE4A /* DetailDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDescriptionCell.swift; sourceTree = "<group>"; };
+		EE3F74D51F30183F009AFE4A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		EE3F74D61F30183F009AFE4A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		EE3F74D71F30183F009AFE4A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EE3F74D81F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		EE3F74D91F30183F009AFE4A /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		EE3F74DA1F30183F009AFE4A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		EE3F74DB1F30183F009AFE4A /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		EE3F74DC1F30183F009AFE4A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		EE3F74DD1F30183F009AFE4A /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		EE3F74DE1F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		EE3F74E91F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsDispensaryDetailAttribute.swift; sourceTree = "<group>"; };
+		EE3F74EB1F301B93009AFE4A /* ClsReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsReview.swift; sourceTree = "<group>"; };
+		EE3F74ED1F3022E2009AFE4A /* ClsOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsOffer.swift; sourceTree = "<group>"; };
+		EE3F74EF1F3022EC009AFE4A /* ClsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsAbout.swift; sourceTree = "<group>"; };
 		EE82770D1F23868F006CB38E /* Wikileaf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikileaf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8277101F23868F006CB38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8277121F23868F006CB38E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +106,9 @@
 		EE8277461F291441006CB38E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EE8277491F291A17006CB38E /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 		EE82774A1F291A17006CB38E /* PlaceAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceAnnotationView.xib; sourceTree = "<group>"; };
+		EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailViewController.swift; sourceTree = "<group>"; };
+		EE8277511F2D9371006CB38E /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		EE8277531F2D9595006CB38E /* FlexibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +156,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE3F74D31F30183F009AFE4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F74D41F30183F009AFE4A /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EE3F74D41F30183F009AFE4A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F74D51F30183F009AFE4A /* OpenSans-Bold.ttf */,
+				EE3F74D61F30183F009AFE4A /* OpenSans-BoldItalic.ttf */,
+				EE3F74D71F30183F009AFE4A /* OpenSans-ExtraBold.ttf */,
+				EE3F74D81F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf */,
+				EE3F74D91F30183F009AFE4A /* OpenSans-Italic.ttf */,
+				EE3F74DA1F30183F009AFE4A /* OpenSans-Light.ttf */,
+				EE3F74DB1F30183F009AFE4A /* OpenSans-LightItalic.ttf */,
+				EE3F74DC1F30183F009AFE4A /* OpenSans-Regular.ttf */,
+				EE3F74DD1F30183F009AFE4A /* OpenSans-SemiBold.ttf */,
+				EE3F74DE1F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		EE8277041F23868F006CB38E = {
 			isa = PBXGroup;
 			children = (
@@ -137,17 +206,30 @@
 		EE82770F1F23868F006CB38E /* Wikileaf */ = {
 			isa = PBXGroup;
 			children = (
+				EE3F74D31F30183F009AFE4A /* Resources */,
 				EE8277481F291A17006CB38E /* AnnotationView */,
 				EE8277101F23868F006CB38E /* AppDelegate.swift */,
+				EE8277511F2D9371006CB38E /* HeaderView.xib */,
 				EE82773E1F239038006CB38E /* DrawerViewController.swift */,
+				EE3F74C91F2FA2C7009AFE4A /* DetailAttributeTableViewCell.swift */,
+				EE3F74D11F30161B009AFE4A /* DetailDescriptionCell.swift */,
+				EE3F74CD1F3015BD009AFE4A /* DetailReviewCell.swift */,
+				EE3F74CF1F3015EB009AFE4A /* DetailOfferCell.swift */,
+				EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */,
 				EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */,
 				EE8277441F27C1BF006CB38E /* ClsDetail.swift */,
 				EE8277121F23868F006CB38E /* ViewController.swift */,
 				EE8277141F23868F006CB38E /* Main.storyboard */,
+				EE3F74CB1F301592009AFE4A /* DetailTitleCell.swift */,
 				EE8277171F23868F006CB38E /* Assets.xcassets */,
 				EE8277191F23868F006CB38E /* LaunchScreen.storyboard */,
 				EE82771C1F23868F006CB38E /* Info.plist */,
 				EE8277401F249150006CB38E /* HDDrawerView.swift */,
+				EE8277531F2D9595006CB38E /* FlexibleHeaderView.swift */,
+				EE3F74E91F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift */,
+				EE3F74EB1F301B93009AFE4A /* ClsReview.swift */,
+				EE3F74ED1F3022E2009AFE4A /* ClsOffer.swift */,
+				EE3F74EF1F3022EC009AFE4A /* ClsAbout.swift */,
 			);
 			path = Wikileaf;
 			sourceTree = "<group>";
@@ -293,8 +375,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */,
+				EE3F74E21F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				EE3F74E71F30183F009AFE4A /* OpenSans-SemiBold.ttf in Resources */,
+				EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */,
+				EE8277521F2D9371006CB38E /* HeaderView.xib in Resources */,
+				EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */,
+				EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */,
+				EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */,
+				EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */,
+				EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				EE8277181F23868F006CB38E /* Assets.xcassets in Resources */,
 				EE8277161F23868F006CB38E /* Main.storyboard in Resources */,
+				EE3F74E41F30183F009AFE4A /* OpenSans-Light.ttf in Resources */,
+				EE3F74E61F30183F009AFE4A /* OpenSans-Regular.ttf in Resources */,
 				EE82774C1F291A17006CB38E /* PlaceAnnotationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,12 +462,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8277131F23868F006CB38E /* ViewController.swift in Sources */,
+				EE3F74D01F3015EB009AFE4A /* DetailOfferCell.swift in Sources */,
 				EE8277451F27C1BF006CB38E /* ClsDetail.swift in Sources */,
 				EE82774B1F291A17006CB38E /* PlaceAnnotationView.swift in Sources */,
+				EE8277501F2CB39D006CB38E /* DispensaryDetailViewController.swift in Sources */,
+				EE8277541F2D9595006CB38E /* FlexibleHeaderView.swift in Sources */,
+				EE3F74CA1F2FA2C7009AFE4A /* DetailAttributeTableViewCell.swift in Sources */,
 				EE8277411F249150006CB38E /* HDDrawerView.swift in Sources */,
+				EE3F74CC1F301592009AFE4A /* DetailTitleCell.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
 				EE82773F1F239038006CB38E /* DrawerViewController.swift in Sources */,
+				EE3F74D21F30161B009AFE4A /* DetailDescriptionCell.swift in Sources */,
+				EE3F74F01F3022EC009AFE4A /* ClsAbout.swift in Sources */,
+				EE3F74EA1F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift in Sources */,
+				EE3F74CE1F3015BD009AFE4A /* DetailReviewCell.swift in Sources */,
+				EE3F74EC1F301B93009AFE4A /* ClsReview.swift in Sources */,
 				EE8277431F27BEE1006CB38E /* DrawerDetailCell.swift in Sources */,
+				EE3F74EE1F3022E2009AFE4A /* ClsOffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
