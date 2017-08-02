@@ -44,6 +44,7 @@
 		EE8277501F2CB39D006CB38E /* DispensaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */; };
 		EE8277521F2D9371006CB38E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8277511F2D9371006CB38E /* HeaderView.xib */; };
 		EE8277541F2D9595006CB38E /* FlexibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277531F2D9595006CB38E /* FlexibleHeaderView.swift */; };
+		EEA34EE71F3179570006933D /* ClsHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA34EE61F3179570006933D /* ClsHours.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailViewController.swift; sourceTree = "<group>"; };
 		EE8277511F2D9371006CB38E /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		EE8277531F2D9595006CB38E /* FlexibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeaderView.swift; sourceTree = "<group>"; };
+		EEA34EE61F3179570006933D /* ClsHours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsHours.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				EE3F74CD1F3015BD009AFE4A /* DetailReviewCell.swift */,
 				EE3F74CF1F3015EB009AFE4A /* DetailOfferCell.swift */,
 				EE82774F1F2CB39D006CB38E /* DispensaryDetailViewController.swift */,
+				EEA34EE61F3179570006933D /* ClsHours.swift */,
 				EE8277421F27BEE1006CB38E /* DrawerDetailCell.swift */,
 				EE8277441F27C1BF006CB38E /* ClsDetail.swift */,
 				EE8277121F23868F006CB38E /* ViewController.swift */,
@@ -473,6 +476,7 @@
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
 				EE82773F1F239038006CB38E /* DrawerViewController.swift in Sources */,
 				EE3F74D21F30161B009AFE4A /* DetailDescriptionCell.swift in Sources */,
+				EEA34EE71F3179570006933D /* ClsHours.swift in Sources */,
 				EE3F74F01F3022EC009AFE4A /* ClsAbout.swift in Sources */,
 				EE3F74EA1F301B20009AFE4A /* ClsDispensaryDetailAttribute.swift in Sources */,
 				EE3F74CE1F3015BD009AFE4A /* DetailReviewCell.swift in Sources */,

@@ -18,7 +18,7 @@ class ClsDispensaryDetailAttribute: NSObject {
     var strAttributeTitle:String!
     var strOperation:String!
     var strAttributeName:String!
-    var strImageName:String!
+    var strImageName:String = ""
     var strAttributeValue:String!
     var attributeType:AttributeType = .Detail
     

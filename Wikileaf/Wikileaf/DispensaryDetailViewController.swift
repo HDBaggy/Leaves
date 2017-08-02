@@ -10,24 +10,28 @@ import UIKit
 import GSKStretchyHeaderView
 
 class DispensaryDetailViewController: UIViewController {
-   
+    
     @IBOutlet weak var tblDetails: UITableView!
     var arrDetails:[AnyObject]!
-    var objTableHeaderView:GSKStretchyHeaderView!
-    
-    var ids = ["DispsnearyDetailAttributeCell","DispensaryDetailTitleCell","DispensaryDeatilReviewCell","DispensaryDetailOfferCell","DispensaryDetailDescriptionCell"]
+    var objTableHeaderView:FlexibleHeaderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initializeOnce()
         // Do any additional setup after loading the view.
     }
-
-    func initializeOnce(){
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        objTableHeaderView.minimumContentHeight = 64
+    }
+    
+    func initializeOnce(){
+        
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 60
         tblDetails.bounces = false
+        
         
         arrDetails = Array()
         
@@ -46,19 +50,17 @@ class DispensaryDetailViewController: UIViewController {
         
         objAttribute = ClsDispensaryDetailAttribute()
         objAttribute.strAttributeName = "ADDRESS"
-        objAttribute.strAttributeValue = "9509 Rainier Ave S,\nSeattle,\nWA 98118"
+        objAttribute.strAttributeValue = "9509 Rainier Ave S,\n Seattle,\n WA 98118"
         objAttribute.strImageName = "Go Button"
         objAttribute.attributeType = .Detail
         arrDetails.append(objAttribute)
         
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "HOURS"
-        objAttribute.strOperation = "Show All"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
+        let objHours = ClsHours()
+        objHours.strBriefDetail = "Open Now until 9:00 PM"
+        arrDetails.append(objHours)
         
         objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeName = "REVIEWS"
+        objAttribute.strAttributeTitle = "REVIEWS"
         objAttribute.strOperation = "Write a Review"
         objAttribute.attributeType = .Operation
         arrDetails.append(objAttribute)
@@ -97,14 +99,15 @@ class DispensaryDetailViewController: UIViewController {
         objAttribute = ClsDispensaryDetailAttribute()
         objAttribute.strAttributeTitle = "ABOUT"
         objAttribute.strOperation = "Read More"
+        objAttribute.attributeType = .Operation
         arrDetails.append(objAttribute)
         
         let objDispensaryAbout = ClsAbout()
         objDispensaryAbout.strAboutDetail = "Las Vegas has more than 100,000 hotel rooms to choose from. There is something for every budget and enough entertainment within walking distance to keep anyone occupied for months, never mind the usual weekend stay or honeymoon. There are few cities which have as many luxury hotels as Las Vegas."
-        arrDetails.append(objAttribute)
+        arrDetails.append(objDispensaryAbout)
         
         tblDetails.reloadData()
-
+        
         loadHeader()
         
         tblDetails.contentSize = CGSize(width: 0, height: 1000)
@@ -113,16 +116,19 @@ class DispensaryDetailViewController: UIViewController {
     }
     
     func loadHeader(){
-    
-        objTableHeaderView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! GSKStretchyHeaderView
+        
+        objTableHeaderView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! FlexibleHeaderView
         tblDetails.addSubview(objTableHeaderView)
         
-        objTableHeaderView.expansionMode = .immediate
+        objTableHeaderView.expansionMode = .topOnly
         objTableHeaderView.minimumContentHeight = 64
         objTableHeaderView.maximumContentHeight = 350
+//        objTableHeaderView.minimumContentHeight = 64
         objTableHeaderView.contentShrinks = true
-        objTableHeaderView.contentExpands = false
+        objTableHeaderView.contentExpands = true
         objTableHeaderView.contentAnchor = .top
+        objTableHeaderView.setMaximumContentHeight(350, resetAnimated: false)
+        
         
     }
     
@@ -130,7 +136,7 @@ class DispensaryDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 
@@ -146,26 +152,73 @@ extension DispensaryDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let objDetail = arrDetails[indexPath.row]
+        let objTmpDetail = arrDetails[indexPath.row]
         
-        if objDetail.isKind(of: ClsDispensaryDetailAttribute.self) == true {
-        
+        if objTmpDetail.isKind(of: ClsDispensaryDetailAttribute.self) == true {
             
-        } else if objDetail.isKind(of: ClsDispensaryDetailAttribute.self) == true {
-        
-        } else if objDetail.isKind(of: ClsDispensaryDetailAttribute.self) == true {
+            let objDetail = objTmpDetail as! ClsDispensaryDetailAttribute
             
+            if objDetail.attributeType == .Detail {
+                
+                let objCell = tableView.dequeueReusableCell(withIdentifier: "DispsnearyDetailAttributeCell", for: indexPath) as! DetailAttributeCell
+                objCell.lblAttributeName?.text = objDetail.strAttributeName
+                objCell.lblAttributeValue?.text = objDetail.strAttributeValue
+                objCell.imgAttributeIcon.image = UIImage(named: objDetail.strImageName)
+                return objCell
+            }
+            
+            if objDetail.attributeType == .Operation {
+                
+                let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailTitleCell", for: indexPath) as! DetailTitleCell
+                objCell.lblTitleName.text = objDetail.strAttributeTitle
+                objCell.lblOperationName.text = objDetail.strOperation
+                return objCell
+            }
+            
+        } else if objTmpDetail.isKind(of: ClsOffer.self) == true {
+            
+            let objDetail = objTmpDetail as! ClsOffer
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailOfferCell", for: indexPath) as! DetailOfferCell
+            objCell.lblOfferDetail.text = objDetail.strOffer
+            return objCell
+            
+        } else if objTmpDetail.isKind(of: ClsReview.self) == true {
+            
+            let objDetail = objTmpDetail as! ClsReview
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDeatilReviewCell", for: indexPath) as! DetailReviewCell
+            objCell.lblReviewerDetail.text = "John Doe - 37 months ago"
+            objCell.lblReview.text = objDetail.strReviewDetail
+            return objCell
+            
+        } else if objTmpDetail.isKind(of: ClsAbout.self) == true {
+            
+            let objDetail = objTmpDetail as! ClsAbout
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailDescriptionCell", for: indexPath) as! DetailDescriptionCell
+            objCell.lblDescription.text = objDetail.strAboutDetail
+            return objCell
+        } else if objTmpDetail.isKind(of: ClsHours.self) == true {
+            
+            let objDetail = objTmpDetail as! ClsHours
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailHoursDescriptionCell", for: indexPath) as! DetailDescriptionCell
+            objCell.lblDescription.text = objDetail.strBriefDetail
+            return objCell
         }
         
+        return tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailTitleCell", for: indexPath) as! DetailTitleCell
+    }
+}
+
+extension DispensaryDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //return max(60, UITableViewAutomaticDimension)
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        /*
-        let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailCell", for: indexPath) as! DrawerDetailCell
-        let objDetail = arrDetails[indexPath.row]
-        objCell.lblDetail.text = objDetail.strAttributeName
-        objCell.imgDetailIcon.image = UIImage(named: objDetail.strImageName)
-        */
-        return objCell
+        tableView.reloadRows(at: [indexPath], with: .fade)
+        //tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
