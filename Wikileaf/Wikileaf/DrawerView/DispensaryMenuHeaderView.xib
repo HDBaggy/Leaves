@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DispensaryMenuHeaderView" customModule="Wikileaf" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-EP-tTj">
+                    <rect key="frame" x="16" y="14" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2wn-au-9mJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-n1-oPM">
+                    <rect key="frame" x="307" y="8" width="52" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="52" id="9GS-8H-lyI"/>
+                        <constraint firstAttribute="height" constant="32" id="hK7-gB-kbM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                    <state key="normal" title="Change">
+                        <color key="titleColor" red="0.20392156862745098" green="0.83529411764705885" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnUnitTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="yRb-kj-gT2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96068006753921509" green="0.96084433794021606" blue="0.96066969633102417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7uF-EP-tTj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2ki-NH-MJc"/>
+                <constraint firstItem="7uF-EP-tTj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OUA-jk-t0p"/>
+                <constraint firstItem="kJf-n1-oPM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q9W-Lb-WiO"/>
+                <constraint firstAttribute="trailing" secondItem="kJf-n1-oPM" secondAttribute="trailing" constant="16" id="ypH-Fj-0yN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnUnit" destination="kJf-n1-oPM" id="y3I-3P-T3z"/>
+                <outlet property="lblTitle" destination="7uF-EP-tTj" id="ATv-g7-fwv"/>
+            </connections>
+            <point key="canvasLocation" x="23.5" y="-30"/>
+        </view>
+    </objects>
+</document>
