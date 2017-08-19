@@ -50,6 +50,9 @@
 		EE8277261F23868F006CB38E /* WikileafTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277251F23868F006CB38E /* WikileafTests.swift */; };
 		EE8277311F23868F006CB38E /* WikileafUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277301F23868F006CB38E /* WikileafUITests.swift */; };
 		EE8277471F291441006CB38E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8277461F291441006CB38E /* MapKit.framework */; };
+		EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */; };
+		EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */; };
+		EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,9 @@
 		EE8277301F23868F006CB38E /* WikileafUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikileafUITests.swift; sourceTree = "<group>"; };
 		EE8277321F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8277461F291441006CB38E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuHeaderView.swift; sourceTree = "<group>"; };
+		EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryMenuHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,7 @@
 		EE804DCC1F40200400F987CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */,
 				EE804DDF1F40205500F987CC /* DispensaryDetailViewController.swift */,
 				EE804DE01F40205500F987CC /* DispensaryMenuController.swift */,
 				EE804DE11F40205500F987CC /* ViewController.swift */,
@@ -246,6 +253,7 @@
 		EE804DFC1F40210200F987CC /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE92F98B1F47EA4500ABAAAF /* DrawerView */,
 				EE804DFD1F40210200F987CC /* AnnotationView */,
 				EE804E001F40210200F987CC /* HDDrawerView */,
 			);
@@ -325,6 +333,15 @@
 				EE8277321F23868F006CB38E /* Info.plist */,
 			);
 			path = WikileafUITests;
+			sourceTree = "<group>";
+		};
+		EE92F98B1F47EA4500ABAAAF /* DrawerView */ = {
+			isa = PBXGroup;
+			children = (
+				EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */,
+				EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */,
+			);
+			path = DrawerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +465,7 @@
 				EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */,
 				EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */,
 				EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */,
+				EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */,
 				EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */,
 				EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */,
 				EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */,
@@ -527,6 +545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */,
 				EE804DE21F40205500F987CC /* DispensaryDetailViewController.swift in Sources */,
 				EE804DF61F40209C00F987CC /* ClsReview.swift in Sources */,
 				EE804DF21F40209C00F987CC /* ClsDispensaryMenu.swift in Sources */,
@@ -539,6 +558,7 @@
 				EE804E041F40210200F987CC /* HDDrawerView.swift in Sources */,
 				EE804DF11F40209C00F987CC /* ClsDispensaryItem.swift in Sources */,
 				EE804DD81F40200400F987CC /* DetailReviewCell.swift in Sources */,
+				EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */,
 				EE804DD61F40200400F987CC /* DetailDescriptionCell.swift in Sources */,
 				EE804DD71F40200400F987CC /* DetailOfferCell.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
