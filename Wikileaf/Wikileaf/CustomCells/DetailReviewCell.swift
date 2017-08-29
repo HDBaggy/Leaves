@@ -15,6 +15,11 @@ class DetailReviewCell: UITableViewCell {
     @IBOutlet weak var lblReviewerDetail: UILabel!
     @IBOutlet weak var lblReview: UILabel!
     
+    func configureCell(pobjRating:ClsReview){
+
+        lblReviewerDetail.text = "July 28, 2017"
+        lblReview.text = pobjRating.strReviewDetail
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

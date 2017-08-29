@@ -44,7 +44,7 @@ class FlexibleHeaderView: GSKStretchyHeaderView {
     }
     
     override func didChangeStretchFactor(_ stretchFactor: CGFloat) {
-        print("Stretched by \(stretchFactor)")
+        //print("Stretched by \(stretchFactor)")
 
         imgBackground.alpha = stretchFactor
         imgFilter.alpha = stretchFactor

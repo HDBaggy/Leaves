@@ -20,39 +20,50 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DispensaryMenuHeaderView" customModule="Wikileaf" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-EP-tTj">
-                    <rect key="frame" x="16" y="14" width="42" height="21"/>
+                    <rect key="frame" x="16" y="17.5" width="275" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="2wn-au-9mJ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-n1-oPM">
-                    <rect key="frame" x="307" y="8" width="52" height="32"/>
+                    <rect key="frame" x="307" y="12" width="52" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="52" id="9GS-8H-lyI"/>
                         <constraint firstAttribute="height" constant="32" id="hK7-gB-kbM"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                     <state key="normal" title="Change">
-                        <color key="titleColor" red="0.20392156862745098" green="0.83529411764705885" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.86549871580000004" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="btnUnitTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="yRb-kj-gT2"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCU-rx-Lvu" userLabel="Seperator View">
+                    <rect key="frame" x="0.0" y="55" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1186322774" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="pHt-V2-zd2"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="0.96068006753921509" green="0.96084433794021606" blue="0.96066969633102417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="7uF-EP-tTj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2ki-NH-MJc"/>
                 <constraint firstItem="7uF-EP-tTj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OUA-jk-t0p"/>
                 <constraint firstItem="kJf-n1-oPM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q9W-Lb-WiO"/>
+                <constraint firstItem="kJf-n1-oPM" firstAttribute="leading" secondItem="7uF-EP-tTj" secondAttribute="trailing" constant="16" id="nCE-F2-Can"/>
+                <constraint firstAttribute="trailing" secondItem="nCU-rx-Lvu" secondAttribute="trailing" id="nTq-MY-427"/>
+                <constraint firstItem="nCU-rx-Lvu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sKb-gr-jv8"/>
                 <constraint firstAttribute="trailing" secondItem="kJf-n1-oPM" secondAttribute="trailing" constant="16" id="ypH-Fj-0yN"/>
+                <constraint firstAttribute="bottom" secondItem="nCU-rx-Lvu" secondAttribute="bottom" id="zxt-3L-2FV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

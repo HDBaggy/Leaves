@@ -21,13 +21,13 @@ class DispensaryMenuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchContainerView.layer.masksToBounds = true
-        searchContainerView.layer.cornerRadius = 3.0
-        
-        
-        
         initializeOnce()
         
+        /*
+        searchContainerView.layer.masksToBounds = true
+        searchContainerView.layer.cornerRadius = 3.0
+        */
+
         /*
  shadowView.backgroundColor=[UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:0.5];
  [shadowView.layer setCornerRadius:5.0f];
@@ -61,10 +61,11 @@ class DispensaryMenuController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.addShadow(pobjView: objNavigationHeaderView)
+        self.objNavigationHeaderView.addShadow()
         
     }
     
+    /*
     func addShadow(pobjView:UIView){
     
         pobjView.layer.shadowRadius = 3
@@ -72,7 +73,7 @@ class DispensaryMenuController: UIViewController {
         pobjView.layer.shadowColor = UIColor.black.cgColor
         pobjView.layer.shadowOpacity = 0.75
         
-    }
+    }*/
     
     func initializeOnce(){
     
@@ -221,11 +222,12 @@ extension DispensaryMenuController: UITableViewDataSource {
         objCell.priceView.layer.cornerRadius = 3.0
         objCell.priceView.layer.masksToBounds = true
         
+        /*
         objCell.objRowView.layer.masksToBounds = true
-        objCell.objRowView.layer.cornerRadius = 3.0
+        objCell.objRowView.layer.cornerRadius = 0.0
         objCell.objRowView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1170804795).cgColor
-        objCell.objRowView.layer.borderWidth = 1.0
-        
+        objCell.objRowView.layer.borderWidth = 0.5
+        */
         return objCell
     }
 }
@@ -235,13 +237,17 @@ extension DispensaryMenuController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let objSectionView = Bundle.main.loadNibNamed("DispensaryMenuHeaderView", owner: self, options: nil)?.first as! DispensaryMenuHeaderView
-        objSectionView.lblTitle.text = "Flower"
+        objSectionView.lblTitle.text = "FLOWER"
         objSectionView.btnUnit.setTitle("1/8 OZ", for: .normal)
         return objSectionView
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 48.0
+        return 56.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

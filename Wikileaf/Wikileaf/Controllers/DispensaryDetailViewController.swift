@@ -8,22 +8,123 @@
 
 import UIKit
 import GSKStretchyHeaderView
+import IDMPhotoBrowser
 
 class DispensaryDetailViewController: UIViewController {
     
     @IBOutlet weak var tblDetails: UITableView!
     var arrDetails:[AnyObject]!
     var objTableHeaderView:FlexibleHeaderView!
+    var objPhotoGalleryController:PhotoGalleryViewController!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeOnce()
-        // Do any additional setup after loading the view.
+        
+        if  arrDetails == nil {
+            arrDetails = Array()
+        }
+        
+        self.initializeOnce()
+        getData()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        objTableHeaderView.minimumContentHeight = 64
+
+    func getData(){
+        
+        if arrDetails.count == 0 {
+            
+            var objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeName = "TYPE"
+            objAttribute.strAttributeValue = "Recretional Dispensary"
+            objAttribute.attributeType = .Detail
+            arrDetails.append(objAttribute)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeName = "CALL"
+            objAttribute.strAttributeValue = "+41 31 961 99 00"
+            objAttribute.strImageName = "ic_call_black_24px"
+            objAttribute.attributeType = .Detail
+            arrDetails.append(objAttribute)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeName = "ADDRESS"
+            objAttribute.strAttributeValue = "9509 Rainier Ave S,\nSeattle,\nWA 98118"
+            objAttribute.strImageName = "Go Button"
+            objAttribute.attributeType = .Detail
+            arrDetails.append(objAttribute)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeTitle = "HOURS"
+            objAttribute.strOperation = "SHOW ALL"
+            objAttribute.attributeType = .Operation
+            arrDetails.append(objAttribute)
+            
+            let objHours = ClsHours()
+            objHours.strBriefDetail = "Open Now until 9:00 PM"
+            arrDetails.append(objHours)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeTitle = "Photos"
+            objAttribute.strOperation = "VIEW ALL"
+            objAttribute.attributeType = .Operation
+            arrDetails.append(objAttribute)
+            
+            let objPhotoDetail = ClsPhotoDetails()
+            objPhotoDetail.arrPhotoNames = Array()
+            objPhotoDetail.arrPhotoNames.append("sample_image_1")
+            objPhotoDetail.arrPhotoNames.append("sample_image_2")
+            objPhotoDetail.arrPhotoNames.append("sample_image_3")
+            arrDetails.append(objPhotoDetail)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeTitle = "Reviews"
+            objAttribute.strOperation = "ALL REVIEWS"
+            objAttribute.attributeType = .Operation
+            arrDetails.append(objAttribute)
+            
+            var objReview = ClsReview()
+            objReview.strReviewerName = "John Doe"
+            objReview.strReviewTime = "36 months ago"
+            objReview.fltReview = 4.0
+            objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
+            arrDetails.append(objReview)
+            
+//            objReview = ClsReview()
+//            objReview.strReviewerName = "John Doe"
+//            objReview.strReviewTime = "36 months ago"
+//            objReview.fltReview = 4.0
+//            objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
+//            arrDetails.append(objReview)
+            
+//            objAttribute = ClsDispensaryDetailAttribute()
+//            objAttribute.strAttributeTitle = "38 Reviews"
+//            objAttribute.strOperation = "All Reviews"
+//            objAttribute.attributeType = .Operation
+//            arrDetails.append(objAttribute)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeTitle = "Monday Magic"
+            objAttribute.strOperation = "ALL DEALS"
+            objAttribute.attributeType = .Operation
+            arrDetails.append(objAttribute)
+            
+            let objOffer = ClsOffer()
+            objOffer.strOffer = "CaptainForm is a five-star WordPress plugin that takes form building to another level. Forms were never a top priority for CMS developers. Basic functionality exists in most content management systems, however, implementation is limited."
+            objOffer.strIcon = "Share button"
+            arrDetails.append(objOffer)
+            
+            objAttribute = ClsDispensaryDetailAttribute()
+            objAttribute.strAttributeTitle = "About"
+            objAttribute.strOperation = "More"
+            objAttribute.attributeType = .Operation
+            arrDetails.append(objAttribute)
+            
+            let objDispensaryAbout = ClsAbout()
+            objDispensaryAbout.strAboutDetail = "Las Vegas has more than 100,000 hotel rooms to choose from. There is something for every budget and enough entertainment within walking distance to keep anyone occupied for months, never mind the usual weekend stay or honeymoon. There are few cities which have as many luxury hotels as Las Vegas."
+            arrDetails.append(objDispensaryAbout)
+            
+            tblDetails.reloadData()
+        }
     }
     
     func initializeOnce(){
@@ -31,98 +132,7 @@ class DispensaryDetailViewController: UIViewController {
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 60
         tblDetails.bounces = false
-        
-        
-        arrDetails = Array()
-        
-        var objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeName = "TYPE"
-        objAttribute.strAttributeValue = "Recretional Dispensary"
-        objAttribute.attributeType = .Detail
-        arrDetails.append(objAttribute)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeName = "CALL"
-        objAttribute.strAttributeValue = "+41 31 961 99 00"
-        objAttribute.strImageName = "ic_call_black_24px"
-        objAttribute.attributeType = .Detail
-        arrDetails.append(objAttribute)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeName = "ADDRESS"
-        objAttribute.strAttributeValue = "9509 Rainier Ave S,\nSeattle,\nWA 98118"
-        objAttribute.strImageName = "Go Button"
-        objAttribute.attributeType = .Detail
-        arrDetails.append(objAttribute)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "HOURS"
-        objAttribute.strOperation = "SHOW ALL"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
-        
-        let objHours = ClsHours()
-        objHours.strBriefDetail = "Open Now until 9:00 PM"
-        arrDetails.append(objHours)
-        
-        let objPhotoDetail = ClsPhotoDetails()
-        objPhotoDetail.arrPhotoNames = Array()
-        objPhotoDetail.arrPhotoNames.append("sample_image_1")
-        objPhotoDetail.arrPhotoNames.append("sample_image_2")
-        objPhotoDetail.arrPhotoNames.append("sample_image_3")
-        arrDetails.append(objPhotoDetail)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "REVIEWS"
-        objAttribute.strOperation = "Write a Review"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
-        
-        var objReview = ClsReview()
-        objReview.strReviewerName = "John Doe"
-        objReview.strReviewTime = "36 months ago"
-        objReview.fltReview = 4.0
-        objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
-        arrDetails.append(objReview)
-        
-        objReview = ClsReview()
-        objReview.strReviewerName = "John Doe"
-        objReview.strReviewTime = "36 months ago"
-        objReview.fltReview = 4.0
-        objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
-        arrDetails.append(objReview)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "38 Reviews"
-        objAttribute.strOperation = "All Reviews"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "TODAY'S DEAL"
-        objAttribute.strOperation = "All Details"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
-        
-        let objOffer = ClsOffer()
-        objOffer.strOffer = "Get 20% off on all Indica strains and 5% off on all products from Seattle Private Reverse"
-        objOffer.strIcon = "Share button"
-        arrDetails.append(objOffer)
-        
-        objAttribute = ClsDispensaryDetailAttribute()
-        objAttribute.strAttributeTitle = "ABOUT"
-        objAttribute.strOperation = "Read More"
-        objAttribute.attributeType = .Operation
-        arrDetails.append(objAttribute)
-        
-        let objDispensaryAbout = ClsAbout()
-        objDispensaryAbout.strAboutDetail = "Las Vegas has more than 100,000 hotel rooms to choose from. There is something for every budget and enough entertainment within walking distance to keep anyone occupied for months, never mind the usual weekend stay or honeymoon. There are few cities which have as many luxury hotels as Las Vegas."
-        arrDetails.append(objDispensaryAbout)
-        
-        tblDetails.reloadData()
-        
         loadHeader()
-        
         tblDetails.contentSize = CGSize(width: 0, height: 1000)
         tblDetails.bounces = true
         
@@ -136,7 +146,7 @@ class DispensaryDetailViewController: UIViewController {
         objTableHeaderView.expansionMode = .topOnly
         objTableHeaderView.minimumContentHeight = 64
         objTableHeaderView.maximumContentHeight = 350
-//        objTableHeaderView.minimumContentHeight = 64
+        //        objTableHeaderView.minimumContentHeight = 64
         objTableHeaderView.contentShrinks = true
         objTableHeaderView.contentExpands = true
         objTableHeaderView.contentAnchor = .top
@@ -144,6 +154,21 @@ class DispensaryDetailViewController: UIViewController {
         objTableHeaderView.headerDelegate = self
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showPhotos" {
+            
+            let objPhotosController = segue.destination as! PhotoGalleryViewController
+            let arrTmpPhotos = sender as! [ClsPhoto]
+            objPhotosController.arrImages = arrTmpPhotos
+            
+            OperationQueue.main.addOperation({
+                
+                objPhotosController.updateList(parrPhotos: arrTmpPhotos)
+            })
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -154,7 +179,7 @@ class DispensaryDetailViewController: UIViewController {
 }
 
 extension DispensaryDetailViewController: FlexibleHeaderDelegate {
-
+    
     func headerShareTapped() {
         
     }
@@ -212,8 +237,7 @@ extension DispensaryDetailViewController: UITableViewDataSource {
             
             let objDetail = objTmpDetail as! ClsReview
             let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDeatilReviewCell", for: indexPath) as! DetailReviewCell
-            objCell.lblReviewerDetail.text = "John Doe - 37 months ago"
-            objCell.lblReview.text = objDetail.strReviewDetail
+            objCell.configureCell(pobjRating: objDetail)
             return objCell
             
         } else if objTmpDetail.isKind(of: ClsAbout.self) == true {
@@ -229,10 +253,10 @@ extension DispensaryDetailViewController: UITableViewDataSource {
             objCell.lblDescription.text = objDetail.strBriefDetail
             return objCell
         } else if objTmpDetail.isKind(of: ClsPhotoDetails.self) == true {
-        
+            
             let objDetail = objTmpDetail as! ClsPhotoDetails
             let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailPhotoCell", for: indexPath) as! DispensaryDetailPhotoCell
-//            objCell.lblDescription.text = objDetail.strBriefDetail
+            //            objCell.lblDescription.text = objDetail.strBriefDetail
             objCell.img1.image = UIImage(named: objDetail.arrPhotoNames[0])
             objCell.img2.image = UIImage(named: objDetail.arrPhotoNames[1])
             objCell.img3.image = UIImage(named: objDetail.arrPhotoNames[2])
@@ -263,7 +287,47 @@ extension DispensaryDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.reloadRows(at: [indexPath], with: .fade)
-        self.performSegue(withIdentifier: "showMenu", sender: nil)
+        
+        let objTmpDetail = arrDetails[indexPath.row]
+        
+        if objTmpDetail.isKind(of: ClsReview.self) == true {
+            
+            self.performSegue(withIdentifier: "showRating", sender: nil)
+            
+        } else if objTmpDetail.isKind(of: ClsOffer.self) == true {
+            
+            self.performSegue(withIdentifier: "showOffers", sender: nil)
+            
+        } else if objTmpDetail.isKind(of: ClsAbout.self) == true {
+            
+            self.performSegue(withIdentifier: "showAbout", sender: nil)
+            
+        } else if objTmpDetail.isKind(of: ClsPhotoDetails.self) {
+            
+            
+            //            var arrPhotoUrl:[NSURL] = Array()
+            var arrPhoto:[ClsPhoto] = Array()
+            
+            for _ in 1...10 {
+                
+                //                arrPhotoUrl.append(NSURL(string: "https://www.w3schools.com/css/img_fjords.jpg")!)
+                
+                let objPhoto = ClsPhoto()
+                objPhoto.strImageUrl = "https://www.w3schools.com/css/img_fjords.jpg"
+                arrPhoto.append(objPhoto)
+            }
+            //            let arrPhotos = IDMPhoto.photos(withURLs: arrPhotoUrl)
+            //            let objPhotoBrowserController = IDMPhotoBrowser(photos: arrPhotos)
+            //            objPhotoBrowserController?.setInitialPageIndex(0)
+            //self.presentViewController(objPhotoBrowserController!, animated: true, completion: nil)
+            //self.present(objPhotoBrowserController!, animated: true, completion: nil)
+            
+            self.performSegue(withIdentifier: "showPhotos", sender: arrPhoto)
+            
+        } else {
+            
+            self.performSegue(withIdentifier: "showMenu", sender: nil)
+        }
     }
 }
 
