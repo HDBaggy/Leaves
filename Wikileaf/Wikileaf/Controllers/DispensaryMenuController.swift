@@ -16,6 +16,9 @@ class DispensaryMenuController: UIViewController {
     var arrMenuItem:[ClsDispensaryItem]!
     var strCurrentWeightage = "1/8 OZ"
     @IBOutlet var objNavigationHeaderView: UIView!
+    @IBOutlet weak var btnFilter: UIButton!
+    @IBOutlet weak var searchBar: UIView!
+    @IBOutlet weak var navigationHeader: UIView!
     
     
     override func viewDidLoad() {
@@ -162,6 +165,41 @@ class DispensaryMenuController: UIViewController {
     @IBAction func btnBackTapped(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func btnSearchTapped(_ sender: Any) {
+        
+        self.searchBar.isHidden = false
+        self.searchBar.alpha = 0
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.navigationHeader.alpha = 0
+            self.searchBar.alpha = 1
+            
+        }) { (completed) in
+            
+            self.navigationHeader.isHidden = true
+            self.txtSearch.becomeFirstResponder()
+        }
+    }
+    
+    @IBAction func btnCancelTapped(_ sender: Any) {
+        
+        self.navigationHeader.isHidden = false
+        self.navigationHeader.alpha = 0
+        self.txtSearch.resignFirstResponder()
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.navigationHeader.alpha = 1
+            self.searchBar.alpha = 0
+            
+        }) { (completed) in
+            
+            self.searchBar.isHidden = true
+        }
+    }
+    
     
     @IBAction func btnShowDirectionsTapped(_ sender: Any) {
     }

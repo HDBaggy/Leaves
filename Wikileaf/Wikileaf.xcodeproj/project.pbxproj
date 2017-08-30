@@ -30,6 +30,8 @@
 		EE56B4861F4FDE1F006E1B83 /* ClsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4851F4FDE1F006E1B83 /* ClsPhoto.swift */; };
 		EE56B4881F4FDEB8006E1B83 /* PhotoGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4871F4FDEB8006E1B83 /* PhotoGalleryCell.swift */; };
 		EE56B48A1F4FE772006E1B83 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4891F4FE772006E1B83 /* AboutViewController.swift */; };
+		EE731E7B1F560DC9005019D8 /* DispensaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */; };
+		EE731E7D1F560DD5005019D8 /* DispensaryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */; };
 		EE804DCA1F401F5700F987CC /* FlexibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DC81F401F5700F987CC /* FlexibleHeaderView.swift */; };
 		EE804DCB1F401F5700F987CC /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE804DC91F401F5700F987CC /* HeaderView.xib */; };
 		EE804DD51F40200400F987CC /* DetailAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DCE1F40200400F987CC /* DetailAttributeTableViewCell.swift */; };
@@ -62,6 +64,8 @@
 		EE8277261F23868F006CB38E /* WikileafTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277251F23868F006CB38E /* WikileafTests.swift */; };
 		EE8277311F23868F006CB38E /* WikileafUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8277301F23868F006CB38E /* WikileafUITests.swift */; };
 		EE8277471F291441006CB38E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8277461F291441006CB38E /* MapKit.framework */; };
+		EE8FFC891F5620CD00EF7578 /* DispensaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */; };
+		EE8FFC8B1F5634C900EF7578 /* GlobalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */; };
 		EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */; };
 		EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */; };
 		EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */; };
@@ -110,6 +114,8 @@
 		EE56B4851F4FDE1F006E1B83 /* ClsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsPhoto.swift; sourceTree = "<group>"; };
 		EE56B4871F4FDEB8006E1B83 /* PhotoGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCell.swift; sourceTree = "<group>"; };
 		EE56B4891F4FE772006E1B83 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailView.swift; sourceTree = "<group>"; };
+		EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryDetailView.xib; sourceTree = "<group>"; };
 		EE804DC81F401F5700F987CC /* FlexibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeaderView.swift; sourceTree = "<group>"; };
 		EE804DC91F401F5700F987CC /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		EE804DCE1F40200400F987CC /* DetailAttributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAttributeTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 		EE8277301F23868F006CB38E /* WikileafUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikileafUITests.swift; sourceTree = "<group>"; };
 		EE8277321F23868F006CB38E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8277461F291441006CB38E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryListViewController.swift; sourceTree = "<group>"; };
+		EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSearchViewController.swift; sourceTree = "<group>"; };
 		EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuHeaderView.swift; sourceTree = "<group>"; };
 		EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryMenuHeaderView.xib; sourceTree = "<group>"; };
@@ -249,6 +257,15 @@
 			path = TableHeaderViews;
 			sourceTree = "<group>";
 		};
+		EE731E791F560DBA005019D8 /* DispensaryDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */,
+				EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */,
+			);
+			path = DispensaryDetailView;
+			sourceTree = "<group>";
+		};
 		EE804DC71F401F3100F987CC /* FlexibleHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +286,8 @@
 				EE804DE11F40205500F987CC /* ViewController.swift */,
 				EE56B4781F4F9A78006E1B83 /* DealsViewController.swift */,
 				EE56B4891F4FE772006E1B83 /* AboutViewController.swift */,
+				EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */,
+				EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +329,7 @@
 		EE804DFC1F40210200F987CC /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE731E791F560DBA005019D8 /* DispensaryDetailView */,
 				EE92F98B1F47EA4500ABAAAF /* DrawerView */,
 				EE804DFD1F40210200F987CC /* AnnotationView */,
 				EE804E001F40210200F987CC /* HDDrawerView */,
@@ -524,6 +544,7 @@
 				EE804DCB1F401F5700F987CC /* HeaderView.xib in Resources */,
 				EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */,
 				EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */,
+				EE731E7D1F560DD5005019D8 /* DispensaryDetailView.xib in Resources */,
 				EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */,
 				EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */,
 				EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */,
@@ -656,6 +677,7 @@
 				EE804DF11F40209C00F987CC /* ClsDispensaryItem.swift in Sources */,
 				EE804DD81F40200400F987CC /* DetailReviewCell.swift in Sources */,
 				EE1AA18F1F4A3E6A00B960E6 /* RatingOverviewCell.swift in Sources */,
+				EE8FFC8B1F5634C900EF7578 /* GlobalSearchViewController.swift in Sources */,
 				EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */,
 				EE804DD61F40200400F987CC /* DetailDescriptionCell.swift in Sources */,
 				EE804DD71F40200400F987CC /* DetailOfferCell.swift in Sources */,
@@ -664,9 +686,11 @@
 				EE56B4821F4FCC4B006E1B83 /* UIView+Extensions.swift in Sources */,
 				EE804DDE1F40203500F987CC /* DrawerDetailCell.swift in Sources */,
 				EE804DF31F40209C00F987CC /* ClsHours.swift in Sources */,
+				EE8FFC891F5620CD00EF7578 /* DispensaryListViewController.swift in Sources */,
 				EE56B4841F4FDDAE006E1B83 /* PhotoGalleryViewController.swift in Sources */,
 				EE804DDB1F40200400F987CC /* DispensaryMenuCell.swift in Sources */,
 				EE804E021F40210200F987CC /* PlaceAnnotationView.swift in Sources */,
+				EE731E7B1F560DC9005019D8 /* DispensaryDetailView.swift in Sources */,
 				EE56B4801F4FC5C9006E1B83 /* ClsOfferSection.swift in Sources */,
 				EE1AA18D1F4993B600B960E6 /* RatingListViewController.swift in Sources */,
 				EE804DEF1F40209C00F987CC /* ClsDetail.swift in Sources */,

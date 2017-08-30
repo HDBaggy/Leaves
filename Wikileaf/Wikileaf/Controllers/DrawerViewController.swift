@@ -20,6 +20,8 @@ class DrawerViewController: UIViewController {
     var arrDetails:[ClsDetail]!
     @IBOutlet weak var btnViewMenu: UIButton!
     var delegate:DrawerControllerDelegate!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var shortView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +29,19 @@ class DrawerViewController: UIViewController {
     }
     
     func initializeOnce(){
+        
+        let objDetailView = Bundle.main.loadNibNamed("DispensaryDetailView", owner: self, options: nil)?.first as! DispensaryDetailView
+        shortView.addSubview(objDetailView)
 
         tblDetails.rowHeight = UITableViewAutomaticDimension
         tblDetails.estimatedRowHeight = 60
         tblDetails.bounces = false
+        
         btnViewMenu.layer.masksToBounds = true
-        btnViewMenu.layer.cornerRadius =  4.0
+        btnViewMenu.layer.cornerRadius =  3.0
+        
+        lblPrice?.layer.masksToBounds = true
+        lblPrice?.layer.cornerRadius = 3.0
         
         arrDetails = Array()
         

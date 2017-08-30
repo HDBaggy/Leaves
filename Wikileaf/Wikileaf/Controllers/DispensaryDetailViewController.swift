@@ -49,7 +49,7 @@ class DispensaryDetailViewController: UIViewController {
             objAttribute = ClsDispensaryDetailAttribute()
             objAttribute.strAttributeName = "ADDRESS"
             objAttribute.strAttributeValue = "9509 Rainier Ave S,\nSeattle,\nWA 98118"
-            objAttribute.strImageName = "Go Button"
+            objAttribute.strImageName = "icn_go_button"
             objAttribute.attributeType = .Detail
             arrDetails.append(objAttribute)
             
@@ -230,7 +230,7 @@ extension DispensaryDetailViewController: UITableViewDataSource {
             let objDetail = objTmpDetail as! ClsOffer
             let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailOfferCell", for: indexPath) as! DetailOfferCell
             objCell.lblOfferDetail.text = objDetail.strOffer
-            objCell.imgOfferIcon.image = UIImage(named: objDetail.strIcon)
+            objCell.imgOfferIcon?.image = UIImage(named: objDetail.strIcon)
             return objCell
             
         } else if objTmpDetail.isKind(of: ClsReview.self) == true {
@@ -246,12 +246,14 @@ extension DispensaryDetailViewController: UITableViewDataSource {
             let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailDescriptionCell", for: indexPath) as! DetailDescriptionCell
             objCell.lblDescription.text = objDetail.strAboutDetail
             return objCell
+            
         } else if objTmpDetail.isKind(of: ClsHours.self) == true {
             
             let objDetail = objTmpDetail as! ClsHours
             let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailHoursDescriptionCell", for: indexPath) as! DetailDescriptionCell
             objCell.lblDescription.text = objDetail.strBriefDetail
             return objCell
+            
         } else if objTmpDetail.isKind(of: ClsPhotoDetails.self) == true {
             
             let objDetail = objTmpDetail as! ClsPhotoDetails

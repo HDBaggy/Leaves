@@ -14,6 +14,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var objContainerView: HDDrawerView!
     @IBOutlet weak var objMapView: MKMapView!
     var objDrawerController:DrawerViewController!
+    @IBOutlet weak var objListContainerView: UIView!
+    var objDispensaryListController:DispensaryListViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +28,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         objMapView?.setCenter(CLLocationCoordinate2DMake(47.6062, -122.33), animated: false)
         objMapView.addAnnotation(getNewAnnotation())
         addDrawer()
-        
-        
     }
     
     func getNewAnnotation() -> MKPointAnnotation {
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func addDrawer(){
         
         objContainerView.frame = CGRect(x: 0, y: self.view.frame.size.height - 30, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        objContainerView.addSteps(parrSteps: [self.view.frame.size.height - 166, 166.0])
+        objContainerView.addSteps(parrSteps: [self.view.frame.size.height - 148, 148.0])
         objContainerView.isHidden = true
     }
     
@@ -52,6 +52,26 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             objDrawerController = segue.destination as! DrawerViewController
             objDrawerController.delegate = self
         }
+        
+        if segue.identifier == "embedDispensaryList" {
+
+            objDispensaryListController = segue.destination as! DispensaryListViewController
+        }
+    }
+    
+    @IBAction func btnListTapped(_ sender: Any) {
+    
+        objListContainerView.isHidden = false
+    }
+    
+    @IBAction func btnMapTapped(_ sender: Any) {
+   
+        objListContainerView.isHidden = true
+    }
+    
+    @IBAction func btnSearchTapped(_ sender: Any) {
+    
+        self.performSegue(withIdentifier: "showSearchScreen", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,12 +101,16 @@ extension ViewController:MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         objContainerView.isHidden = false
-        objContainerView.setVerticalGap(pfltGap: 166)
+        objContainerView.setVerticalGap(pfltGap: 148)
+        let objAnnotationView = view as! PlaceAnnotationView
+        objAnnotationView.imgvBackground.image = #imageLiteral(resourceName: "selected_annotation")
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         
         objContainerView.isHidden = true
         objContainerView.setVerticalGap(pfltGap: 0)
+        let objAnnotationView = view as! PlaceAnnotationView
+        objAnnotationView.imgvBackground.image = #imageLiteral(resourceName: "pin")
     }
 }
