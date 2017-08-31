@@ -15,7 +15,7 @@ protocol FlexibleHeaderDelegate {
     func headerShareTapped()
 }
 
-class FlexibleHeaderView: GSKStretchyHeaderView {
+class DispensaryDetailHeaderView: GSKStretchyHeaderView {
 
     @IBOutlet weak var imgDispensary: UIImageView!
     @IBOutlet weak var lblDispensaryTitle: UILabel!
@@ -27,10 +27,7 @@ class FlexibleHeaderView: GSKStretchyHeaderView {
         
         super.awakeFromNib()
         
-        imgDispensary.layer.masksToBounds = true
-        imgDispensary.layer.borderColor = UIColor.white.cgColor
-        imgDispensary.layer.borderWidth = 2.0
-        imgDispensary.layer.cornerRadius = 3.0
+        imgDispensary.addBorderForImageview()
     }
     
     @IBAction func btnBackTapped(_ sender: Any) {

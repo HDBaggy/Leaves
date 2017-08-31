@@ -20,6 +20,9 @@ class GlobalSearchViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func btnStrainTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "showStrains", sender: nil)
+    }
 
     @IBAction func btnCancelTapped(_ sender: Any) {
     

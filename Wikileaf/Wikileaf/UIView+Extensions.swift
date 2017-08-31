@@ -24,6 +24,14 @@ extension UIView {
         self.layer.shadowRadius = 3.0
     }
     
+    func addBorderForImageview(){
+    
+        self.layer.masksToBounds = true
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderWidth = 2.0
+        self.layer.cornerRadius = 3.0
+    }
+    
     func addBorder(){
         
         self.layer.masksToBounds = true

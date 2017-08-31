@@ -32,8 +32,8 @@
 		EE56B48A1F4FE772006E1B83 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4891F4FE772006E1B83 /* AboutViewController.swift */; };
 		EE731E7B1F560DC9005019D8 /* DispensaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */; };
 		EE731E7D1F560DD5005019D8 /* DispensaryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */; };
-		EE804DCA1F401F5700F987CC /* FlexibleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DC81F401F5700F987CC /* FlexibleHeaderView.swift */; };
-		EE804DCB1F401F5700F987CC /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE804DC91F401F5700F987CC /* HeaderView.xib */; };
+		EE804DCA1F401F5700F987CC /* DispensaryDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DC81F401F5700F987CC /* DispensaryDetailHeaderView.swift */; };
+		EE804DCB1F401F5700F987CC /* DispensaryDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE804DC91F401F5700F987CC /* DispensaryDetailHeaderView.xib */; };
 		EE804DD51F40200400F987CC /* DetailAttributeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DCE1F40200400F987CC /* DetailAttributeTableViewCell.swift */; };
 		EE804DD61F40200400F987CC /* DetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DCF1F40200400F987CC /* DetailDescriptionCell.swift */; };
 		EE804DD71F40200400F987CC /* DetailOfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DD01F40200400F987CC /* DetailOfferCell.swift */; };
@@ -66,6 +66,12 @@
 		EE8277471F291441006CB38E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8277461F291441006CB38E /* MapKit.framework */; };
 		EE8FFC891F5620CD00EF7578 /* DispensaryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */; };
 		EE8FFC8B1F5634C900EF7578 /* GlobalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */; };
+		EE8FFC8D1F57B10400EF7578 /* StrainDeatilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC8C1F57B10400EF7578 /* StrainDeatilViewController.swift */; };
+		EE8FFC8F1F57B4A700EF7578 /* StrainDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC8E1F57B4A700EF7578 /* StrainDetailHeaderView.swift */; };
+		EE8FFC911F57B4B800EF7578 /* StrainDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8FFC901F57B4B800EF7578 /* StrainDetailHeaderView.xib */; };
+		EE8FFC931F57BB6A00EF7578 /* StrainGraphView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8FFC921F57BB6A00EF7578 /* StrainGraphView.xib */; };
+		EE8FFC951F57BB7500EF7578 /* StrainGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC941F57BB7500EF7578 /* StrainGraphView.swift */; };
+		EE8FFC971F57C95500EF7578 /* StrainGraphCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8FFC961F57C95500EF7578 /* StrainGraphCell.swift */; };
 		EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */; };
 		EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */; };
 		EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */; };
@@ -116,8 +122,8 @@
 		EE56B4891F4FE772006E1B83 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailView.swift; sourceTree = "<group>"; };
 		EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryDetailView.xib; sourceTree = "<group>"; };
-		EE804DC81F401F5700F987CC /* FlexibleHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeaderView.swift; sourceTree = "<group>"; };
-		EE804DC91F401F5700F987CC /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		EE804DC81F401F5700F987CC /* DispensaryDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailHeaderView.swift; sourceTree = "<group>"; };
+		EE804DC91F401F5700F987CC /* DispensaryDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryDetailHeaderView.xib; sourceTree = "<group>"; };
 		EE804DCE1F40200400F987CC /* DetailAttributeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAttributeTableViewCell.swift; sourceTree = "<group>"; };
 		EE804DCF1F40200400F987CC /* DetailDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDescriptionCell.swift; sourceTree = "<group>"; };
 		EE804DD01F40200400F987CC /* DetailOfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailOfferCell.swift; sourceTree = "<group>"; };
@@ -156,6 +162,12 @@
 		EE8277461F291441006CB38E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryListViewController.swift; sourceTree = "<group>"; };
 		EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSearchViewController.swift; sourceTree = "<group>"; };
+		EE8FFC8C1F57B10400EF7578 /* StrainDeatilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrainDeatilViewController.swift; sourceTree = "<group>"; };
+		EE8FFC8E1F57B4A700EF7578 /* StrainDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrainDetailHeaderView.swift; sourceTree = "<group>"; };
+		EE8FFC901F57B4B800EF7578 /* StrainDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrainDetailHeaderView.xib; sourceTree = "<group>"; };
+		EE8FFC921F57BB6A00EF7578 /* StrainGraphView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrainGraphView.xib; sourceTree = "<group>"; };
+		EE8FFC941F57BB7500EF7578 /* StrainGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrainGraphView.swift; sourceTree = "<group>"; };
+		EE8FFC961F57C95500EF7578 /* StrainGraphCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrainGraphCell.swift; sourceTree = "<group>"; };
 		EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuHeaderView.swift; sourceTree = "<group>"; };
 		EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryMenuHeaderView.xib; sourceTree = "<group>"; };
@@ -269,8 +281,10 @@
 		EE804DC71F401F3100F987CC /* FlexibleHeader */ = {
 			isa = PBXGroup;
 			children = (
-				EE804DC81F401F5700F987CC /* FlexibleHeaderView.swift */,
-				EE804DC91F401F5700F987CC /* HeaderView.xib */,
+				EE804DC81F401F5700F987CC /* DispensaryDetailHeaderView.swift */,
+				EE804DC91F401F5700F987CC /* DispensaryDetailHeaderView.xib */,
+				EE8FFC8E1F57B4A700EF7578 /* StrainDetailHeaderView.swift */,
+				EE8FFC901F57B4B800EF7578 /* StrainDetailHeaderView.xib */,
 			);
 			path = FlexibleHeader;
 			sourceTree = "<group>";
@@ -288,6 +302,7 @@
 				EE56B4891F4FE772006E1B83 /* AboutViewController.swift */,
 				EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */,
 				EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */,
+				EE8FFC8C1F57B10400EF7578 /* StrainDeatilViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 				EE804DD21F40200400F987CC /* DetailTitleCell.swift */,
 				EE804DD31F40200400F987CC /* DispensaryDetailPhotoCell.swift */,
 				EE804DD41F40200400F987CC /* DispensaryMenuCell.swift */,
+				EE8FFC961F57C95500EF7578 /* StrainGraphCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -333,6 +349,8 @@
 				EE92F98B1F47EA4500ABAAAF /* DrawerView */,
 				EE804DFD1F40210200F987CC /* AnnotationView */,
 				EE804E001F40210200F987CC /* HDDrawerView */,
+				EE8FFC921F57BB6A00EF7578 /* StrainGraphView.xib */,
+				EE8FFC941F57BB7500EF7578 /* StrainGraphView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -539,11 +557,13 @@
 			files = (
 				EE82771B1F23868F006CB38E /* LaunchScreen.storyboard in Resources */,
 				EE804E031F40210200F987CC /* PlaceAnnotationView.xib in Resources */,
+				EE8FFC931F57BB6A00EF7578 /* StrainGraphView.xib in Resources */,
 				EE3F74E21F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				EE3F74E71F30183F009AFE4A /* OpenSans-SemiBold.ttf in Resources */,
-				EE804DCB1F401F5700F987CC /* HeaderView.xib in Resources */,
+				EE804DCB1F401F5700F987CC /* DispensaryDetailHeaderView.xib in Resources */,
 				EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */,
 				EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */,
+				EE8FFC911F57B4B800EF7578 /* StrainDetailHeaderView.xib in Resources */,
 				EE731E7D1F560DD5005019D8 /* DispensaryDetailView.xib in Resources */,
 				EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */,
 				EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */,
@@ -664,14 +684,16 @@
 				EE56B4791F4F9A78006E1B83 /* DealsViewController.swift in Sources */,
 				EE56B4881F4FDEB8006E1B83 /* PhotoGalleryCell.swift in Sources */,
 				EE804DE21F40205500F987CC /* DispensaryDetailViewController.swift in Sources */,
+				EE8FFC951F57BB7500EF7578 /* StrainGraphView.swift in Sources */,
 				EE804DF61F40209C00F987CC /* ClsReview.swift in Sources */,
 				EE804DF21F40209C00F987CC /* ClsDispensaryMenu.swift in Sources */,
 				EE804DF51F40209C00F987CC /* ClsPhotoDetails.swift in Sources */,
 				EE56B47C1F4F9AAA006E1B83 /* DealsHeaderView.swift in Sources */,
 				EE804DDA1F40200400F987CC /* DispensaryDetailPhotoCell.swift in Sources */,
+				EE8FFC8D1F57B10400EF7578 /* StrainDeatilViewController.swift in Sources */,
 				EE804DD51F40200400F987CC /* DetailAttributeTableViewCell.swift in Sources */,
 				EE804DF01F40209C00F987CC /* ClsDispensaryDetailAttribute.swift in Sources */,
-				EE804DCA1F401F5700F987CC /* FlexibleHeaderView.swift in Sources */,
+				EE804DCA1F401F5700F987CC /* DispensaryDetailHeaderView.swift in Sources */,
 				EE804DE41F40205500F987CC /* ViewController.swift in Sources */,
 				EE804E041F40210200F987CC /* HDDrawerView.swift in Sources */,
 				EE804DF11F40209C00F987CC /* ClsDispensaryItem.swift in Sources */,
@@ -683,6 +705,7 @@
 				EE804DD71F40200400F987CC /* DetailOfferCell.swift in Sources */,
 				EE56B4861F4FDE1F006E1B83 /* ClsPhoto.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
+				EE8FFC8F1F57B4A700EF7578 /* StrainDetailHeaderView.swift in Sources */,
 				EE56B4821F4FCC4B006E1B83 /* UIView+Extensions.swift in Sources */,
 				EE804DDE1F40203500F987CC /* DrawerDetailCell.swift in Sources */,
 				EE804DF31F40209C00F987CC /* ClsHours.swift in Sources */,
@@ -699,6 +722,7 @@
 				EE56B48A1F4FE772006E1B83 /* AboutViewController.swift in Sources */,
 				EE804DE31F40205500F987CC /* DispensaryMenuController.swift in Sources */,
 				EE804DF41F40209C00F987CC /* ClsOffer.swift in Sources */,
+				EE8FFC971F57C95500EF7578 /* StrainGraphCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

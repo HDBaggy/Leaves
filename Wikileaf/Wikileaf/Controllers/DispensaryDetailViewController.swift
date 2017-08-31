@@ -14,7 +14,7 @@ class DispensaryDetailViewController: UIViewController {
     
     @IBOutlet weak var tblDetails: UITableView!
     var arrDetails:[AnyObject]!
-    var objTableHeaderView:FlexibleHeaderView!
+    var objTableHeaderView:DispensaryDetailHeaderView!
     var objPhotoGalleryController:PhotoGalleryViewController!
     
     
@@ -89,19 +89,6 @@ class DispensaryDetailViewController: UIViewController {
             objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
             arrDetails.append(objReview)
             
-//            objReview = ClsReview()
-//            objReview.strReviewerName = "John Doe"
-//            objReview.strReviewTime = "36 months ago"
-//            objReview.fltReview = 4.0
-//            objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
-//            arrDetails.append(objReview)
-            
-//            objAttribute = ClsDispensaryDetailAttribute()
-//            objAttribute.strAttributeTitle = "38 Reviews"
-//            objAttribute.strOperation = "All Reviews"
-//            objAttribute.attributeType = .Operation
-//            arrDetails.append(objAttribute)
-            
             objAttribute = ClsDispensaryDetailAttribute()
             objAttribute.strAttributeTitle = "Monday Magic"
             objAttribute.strOperation = "ALL DEALS"
@@ -140,7 +127,7 @@ class DispensaryDetailViewController: UIViewController {
     
     func loadHeader(){
         
-        objTableHeaderView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! FlexibleHeaderView
+        objTableHeaderView = Bundle.main.loadNibNamed("DispensaryDetailHeaderView", owner: self, options: nil)?.first as! DispensaryDetailHeaderView
         tblDetails.addSubview(objTableHeaderView)
         
         objTableHeaderView.expansionMode = .topOnly
