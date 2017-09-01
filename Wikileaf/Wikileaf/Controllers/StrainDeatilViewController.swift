@@ -29,6 +29,32 @@ class StrainDetailViewController: UIViewController {
         
         arrDetails.append(ClsAbout())
         
+        var objUsage = ClsStrainUsage()
+        objUsage.strUsageName = "Insomnia"
+        objUsage.intRating = 5
+        arrDetails.append(objUsage)
+        
+        objUsage = ClsStrainUsage()
+        objUsage.strUsageName = "Loss of Appetite"
+        objUsage.intRating = 4
+        arrDetails.append(objUsage)
+        
+        objUsage = ClsStrainUsage()
+        objUsage.strUsageName = "Pain"
+        objUsage.intRating = 3
+        arrDetails.append(objUsage)
+        
+        objUsage = ClsStrainUsage()
+        objUsage.strUsageName = "Anxiety"
+        objUsage.intRating = 2
+        arrDetails.append(objUsage)
+        
+        objUsage = ClsStrainUsage()
+        objUsage.strUsageName = "Depression"
+        objUsage.intRating = 1
+        arrDetails.append(objUsage)
+        
+        
         loadHeader()
     }
     
@@ -67,24 +93,46 @@ extension StrainDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let objCell = tableView.dequeueReusableCell(withIdentifier: "strainGraphCell", for: indexPath) as! StrainGraphCell
-        objCell.averageIndicaGraph.lblGraphName.text = "Average Indica"
-        objCell.strainHighestGraph.lblGraphName.text = "Strain Highest"
-        objCell.strainAverageGraph.lblGraphName.text = "Strain Average"
+        if indexPath.row == 0 {
+        
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "strainGraphCell", for: indexPath) as! StrainGraphCell
+            objCell.averageIndicaGraph.lblGraphName.text = "Average Indica"
+            objCell.strainHighestGraph.lblGraphName.text = "Strain Highest"
+            objCell.strainAverageGraph.lblGraphName.text = "Strain Average"
+            
+            objCell.averageIndicaGraph.configurBlueBar(pfltAmount: 50)
+            objCell.strainHighestGraph.configurBlueBar(pfltAmount: 50)
+            objCell.strainAverageGraph.configurBlueBar(pfltAmount: 50)
+            
+            objCell.averageIndicaGraph.configurGreenBar(pfltAmount: 60)
+            objCell.strainHighestGraph.configurGreenBar(pfltAmount: 70)
+            objCell.strainAverageGraph.configurGreenBar(pfltAmount: 10)
+            
+            
+            return objCell
+            
+        } else {
+
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "StrainCommonUsageCell", for: indexPath) as! StrainCommonUsageCell
+            let objUsage = arrDetails[indexPath.row] as! ClsStrainUsage
+            objCell.lblUsageName.text = objUsage.strUsageName
+            objCell.configureRating(intRating: objUsage.intRating)
+            return objCell
+        }
         
         
+    }
+}
+
+extension StrainDetailViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        objCell.averageIndicaGraph.configurBlueBar(pfltAmount: 50)
-        objCell.strainHighestGraph.configurBlueBar(pfltAmount: 50)
-        objCell.strainAverageGraph.configurBlueBar(pfltAmount: 50)
-        
-        objCell.averageIndicaGraph.configurGreenBar(pfltAmount: 60)
-        objCell.strainHighestGraph.configurGreenBar(pfltAmount: 70)
-        objCell.strainAverageGraph.configurGreenBar(pfltAmount: 10)
-        
-        
-        return objCell
-        
+        if indexPath.row == 0 {
+            return 312
+        } else {
+            return 58
+        }
     }
 }
 

@@ -9,21 +9,29 @@
 import UIKit
 
 class StrainGraphView: UIView {
-
+    
     @IBOutlet weak var lblGraphName: UILabel!
     @IBOutlet weak var blueBar: UIView!
     @IBOutlet weak var greenBar: UIView!
-    var fltMaximumHeight:CGFloat = 110.0
+    var fltMaximumHeight:CGFloat = 160.0
+    var fltMaximumValue:CGFloat = 40.0
+    
+    @IBOutlet weak var greenBarHeight:NSLayoutConstraint!
+    @IBOutlet weak var blueBarHeight:NSLayoutConstraint!
     
     func configurBlueBar(pfltAmount:CGFloat){
-    
-       let fltFinalHeight = pfltAmount * fltMaximumHeight / 100
-        blueBar.frame = CGRect(x: blueBar.frame.origin.x, y: blueBar.frame.origin.y, width: blueBar.frame.size.width, height: fltFinalHeight)
+        
+        let fltFinalAmount = pfltAmount*100/fltMaximumValue
+        let fltFinalHeight = fltFinalAmount * fltMaximumHeight / 100
+        blueBarHeight?.constant = fltFinalHeight
+        self.layoutIfNeeded()
     }
     
     func configurGreenBar(pfltAmount:CGFloat){
         
-        let fltFinalHeight = pfltAmount * fltMaximumHeight / 100
-        greenBar.frame = CGRect(x: greenBar.frame.origin.x, y: greenBar.frame.origin.y, width: greenBar.frame.size.width, height: fltFinalHeight)
+        let fltFinalAmount = pfltAmount*100/fltMaximumValue
+        let fltFinalHeight = fltFinalAmount * fltMaximumHeight / 100
+        greenBarHeight?.constant = fltFinalHeight
+        self.layoutIfNeeded()
     }
 }

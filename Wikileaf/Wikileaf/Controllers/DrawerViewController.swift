@@ -31,6 +31,7 @@ class DrawerViewController: UIViewController {
     func initializeOnce(){
         
         let objDetailView = Bundle.main.loadNibNamed("DispensaryDetailView", owner: self, options: nil)?.first as! DispensaryDetailView
+        objDetailView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: objDetailView.frame.size.height)
         shortView.addSubview(objDetailView)
 
         tblDetails.rowHeight = UITableViewAutomaticDimension
