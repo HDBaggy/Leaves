@@ -15,7 +15,7 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        objNavigationBar.addShadow()
+        //objNavigationBar.addShadow()
 
         // Do any additional setup after loading the view.
     }

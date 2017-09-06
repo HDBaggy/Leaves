@@ -10,6 +10,7 @@ import UIKit
 
 class ClsOffer: NSObject {
 
+    var strTitle:String!
     var strOffer:String!
     var strIcon:String!
 }

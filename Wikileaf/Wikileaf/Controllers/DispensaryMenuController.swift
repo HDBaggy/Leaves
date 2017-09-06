@@ -64,7 +64,7 @@ class DispensaryMenuController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.objNavigationHeaderView.addShadow()
+//        self.objNavigationHeaderView.addShadow()
         
     }
     
@@ -82,7 +82,7 @@ class DispensaryMenuController: UIViewController {
     
         arrMenuItem = Array()
         
-        let objItem = ClsDispensaryItem()
+        var objItem = ClsDispensaryItem()
         objItem.strItemName = "Flower"
         objItem.arrDispensary = Array()
         
@@ -157,6 +157,32 @@ class DispensaryMenuController: UIViewController {
         objDispensary.strCBDAmount = "CBD - 65.8%"
         objDispensary.strPrice = "$74"
         objItem.arrDispensary.append(objDispensary)
+        arrMenuItem.append(objItem)
+        
+        objItem = ClsDispensaryItem()
+        objItem.strItemName = "Flower 2"
+        objItem.arrDispensary = Array()
+        
+        objDispensary = ClsDispensary()
+        objDispensary.strDispensaryTitle = "Hindu Kush by Seattle Private LTD"
+        objDispensary.strDispensaryType = "Indica"
+        objDispensary.strTHCAmount = "THC - 65.8%"
+        objDispensary.strCBDAmount = "CBD - 65.8%"
+        objDispensary.strPrice = "$74"
+        
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+        objItem.arrDispensary.append(objDispensary)
+
         
         arrMenuItem.append(objItem)
         tblMenu.reloadData()
@@ -202,6 +228,7 @@ class DispensaryMenuController: UIViewController {
     
     
     @IBAction func btnShowDirectionsTapped(_ sender: Any) {
+        
     }
     
     @IBAction func btnFilterTapped(_ sender: Any) {
@@ -211,7 +238,8 @@ class DispensaryMenuController: UIViewController {
         for i in 1...4 {
         
             let objAction = UIAlertAction(title: "Option_\(i)", style: .default) { (action) in
-                print("selected option \(action.title)_\(i)")
+                
+                self.btnFilter.setTitle(action.title, for: .normal)
             }
             objActionSheet.addAction(objAction)
         }
@@ -253,19 +281,11 @@ extension DispensaryMenuController: UITableViewDataSource {
         objCell.lblCbdAmount.text = objItem.strCBDAmount
         objCell.lblWeightage.text = self.strCurrentWeightage
         objCell.imgMenuItem.image = UIImage(named: objItem.strImage)
-        objCell.imgMenuItem.layer.masksToBounds = true
-        objCell.imgMenuItem.layer.cornerRadius = 3.0
-        objCell.imgMenuItem.layer.borderWidth = 1.0
-        objCell.imgMenuItem.layer.borderColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1).cgColor
-        objCell.priceView.layer.cornerRadius = 3.0
-        objCell.priceView.layer.masksToBounds = true
-        
-        /*
-        objCell.objRowView.layer.masksToBounds = true
-        objCell.objRowView.layer.cornerRadius = 0.0
-        objCell.objRowView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1170804795).cgColor
-        objCell.objRowView.layer.borderWidth = 0.5
-        */
+
+        objCell.imgMenuItem.addBorder()
+        objCell.imgMenuItem.makeRoundedCorner()
+        objCell.priceView.makeRoundedCorner()
+
         return objCell
     }
 }
@@ -274,9 +294,33 @@ extension DispensaryMenuController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        let objItem = arrMenuItem[section]
         let objSectionView = Bundle.main.loadNibNamed("DispensaryMenuHeaderView", owner: self, options: nil)?.first as! DispensaryMenuHeaderView
-        objSectionView.lblTitle.text = "FLOWER"
-        objSectionView.btnUnit.setTitle("1/8 OZ", for: .normal)
+        objSectionView.lblTitle.text = objItem.strItemName
+        objSectionView.btnUnit.setTitle(objItem.strUnit, for: .normal)
+        
+        objSectionView.objSectionBlock = {
+        
+            let objActionSheet = UIAlertController(title: "Select Unit", message: "", preferredStyle: .actionSheet)
+            let arrTitles = ["1/8 OZ","1/16 OZ","1/2 OZ","1 OZ"]
+            
+            for strTmpTitle in arrTitles {
+                
+                let objAction = UIAlertAction(title: strTmpTitle, style: .default) { (action) in
+
+                    objItem.strUnit = action.title!
+                    objSectionView.btnUnit.setTitle(objItem.strUnit, for: .normal)
+                }
+                objActionSheet.addAction(objAction)
+            }
+            
+            let objCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            objActionSheet.addAction(objCancelAction)
+            
+            self.present(objActionSheet, animated: true, completion: nil)
+            
+        }
+        
         return objSectionView
     }
     

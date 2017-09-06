@@ -11,7 +11,8 @@ import UIKit
 class DealsViewController: UIViewController {
     
     @IBOutlet weak var tblDeals: UITableView!
-    var arrSections:[ClsOfferSection]!
+//    var arrSections:[ClsOfferSection]!
+    var arrOffers:[ClsOffer]!
     @IBOutlet weak var objNavigationbar: UIView!
     
     override func viewDidLoad() {
@@ -25,34 +26,22 @@ class DealsViewController: UIViewController {
 
 //        objNavigationbar.addShadow()
         
-        arrSections = Array()
-        
-        var objSection = ClsOfferSection()
-        objSection.arrOffers = Array()
-        objSection.strOffer = "TODAY'S DEAL"
-        
+        arrOffers = Array()
+
         var objOffer = ClsOffer()
+        objOffer.strTitle = "Today's Deal"
         objOffer.strOffer = "Get 20% off on all Indica Strains and 5% off on all products from Seattle Private Reserve"
-        objSection.arrOffers.append(objOffer)
-        arrSections.append(objSection)
-        
-        objSection = ClsOfferSection()
-        objSection.arrOffers = Array()
-        objSection.strOffer = "MONDAY'S DEAL"
+        arrOffers.append(objOffer)
         
         objOffer = ClsOffer()
+        objOffer.strTitle = "Monday's Deal"
         objOffer.strOffer = "Get 20% off on all Indica Strains and 5% off on all products from Seattle Private Reserve"
-        objSection.arrOffers.append(objOffer)
-        arrSections.append(objSection)
-        
-        objSection = ClsOfferSection()
-        objSection.arrOffers = Array()
-        objSection.strOffer = "FRIDAY'S DEAL"
+        arrOffers.append(objOffer)
         
         objOffer = ClsOffer()
+        objOffer.strTitle = "Friday's Deal"
         objOffer.strOffer = "Get 20% off on all Indica Strains and 5% off on all products from Seattle Private Reserve"
-        objSection.arrOffers.append(objOffer)
-        arrSections.append(objSection)
+        arrOffers.append(objOffer)
         
         tblDeals.rowHeight = UITableViewAutomaticDimension
         tblDeals.estimatedRowHeight = 60
@@ -73,22 +62,20 @@ class DealsViewController: UIViewController {
 extension DealsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arrSections.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let objSection = arrSections[section]
-        return objSection.arrOffers.count
+        return arrOffers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let objSection = arrSections[indexPath.section]
-        let objDetail = objSection.arrOffers[indexPath.row]
+        let objDetail = arrOffers[indexPath.row]
         let objCell = tableView.dequeueReusableCell(withIdentifier: "OfferCell", for: indexPath) as! DetailOfferCell
+        objCell.lblOfferTitle.text = objDetail.strTitle
         objCell.lblOfferDetail.text = objDetail.strOffer
-        //objCell.imgOfferIcon.image = UIImage(named: objDetail.strIcon)
         return objCell
     }
 }
@@ -100,16 +87,16 @@ extension DealsViewController: UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let objSection = arrSections[section]
-        let objSectionView = Bundle.main.loadNibNamed("DealsHeaderView", owner: self, options: nil)?.first as! DealsHeaderView
-        objSectionView.lblTitle.text = objSection.strOffer
-        return objSectionView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 64
-    }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        
+//        let objSection = arrSections[section]
+//        let objSectionView = Bundle.main.loadNibNamed("DealsHeaderView", owner: self, options: nil)?.first as! DealsHeaderView
+//        objSectionView.lblTitle.text = objSection.strOffer
+//        return objSectionView
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        
+//        return 64
+//    }
 }

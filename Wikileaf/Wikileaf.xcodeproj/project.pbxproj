@@ -22,8 +22,6 @@
 		EE3F74E71F30183F009AFE4A /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DD1F30183F009AFE4A /* OpenSans-SemiBold.ttf */; };
 		EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74DE1F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf */; };
 		EE56B4791F4F9A78006E1B83 /* DealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4781F4F9A78006E1B83 /* DealsViewController.swift */; };
-		EE56B47C1F4F9AAA006E1B83 /* DealsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B47B1F4F9AAA006E1B83 /* DealsHeaderView.swift */; };
-		EE56B47E1F4F9AB7006E1B83 /* DealsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE56B47D1F4F9AB6006E1B83 /* DealsHeaderView.xib */; };
 		EE56B4801F4FC5C9006E1B83 /* ClsOfferSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B47F1F4FC5C9006E1B83 /* ClsOfferSection.swift */; };
 		EE56B4821F4FCC4B006E1B83 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4811F4FCC4B006E1B83 /* UIView+Extensions.swift */; };
 		EE56B4841F4FDDAE006E1B83 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4831F4FDDAE006E1B83 /* PhotoGalleryViewController.swift */; };
@@ -114,8 +112,6 @@
 		EE3F74DD1F30183F009AFE4A /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		EE3F74DE1F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		EE56B4781F4F9A78006E1B83 /* DealsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsViewController.swift; sourceTree = "<group>"; };
-		EE56B47B1F4F9AAA006E1B83 /* DealsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsHeaderView.swift; sourceTree = "<group>"; };
-		EE56B47D1F4F9AB6006E1B83 /* DealsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DealsHeaderView.xib; sourceTree = "<group>"; };
 		EE56B47F1F4FC5C9006E1B83 /* ClsOfferSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsOfferSection.swift; sourceTree = "<group>"; };
 		EE56B4811F4FCC4B006E1B83 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EE56B4831F4FDDAE006E1B83 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
@@ -264,15 +260,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		EE56B47A1F4F9A9B006E1B83 /* TableHeaderViews */ = {
-			isa = PBXGroup;
-			children = (
-				EE56B47B1F4F9AAA006E1B83 /* DealsHeaderView.swift */,
-				EE56B47D1F4F9AB6006E1B83 /* DealsHeaderView.xib */,
-			);
-			path = TableHeaderViews;
-			sourceTree = "<group>";
-		};
 		EE731E791F560DBA005019D8 /* DispensaryDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,7 +390,6 @@
 		EE82770F1F23868F006CB38E /* Wikileaf */ = {
 			isa = PBXGroup;
 			children = (
-				EE56B47A1F4F9A9B006E1B83 /* TableHeaderViews */,
 				EE1AA1621F4991F900B960E6 /* ExternalLibraries */,
 				EE804DFC1F40210200F987CC /* CustomViews */,
 				EE804DDC1F40201400F987CC /* Model Class */,
@@ -574,7 +560,6 @@
 				EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */,
 				EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */,
 				EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */,
-				EE56B47E1F4F9AB7006E1B83 /* DealsHeaderView.xib in Resources */,
 				EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */,
 				EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				EE8277181F23868F006CB38E /* Assets.xcassets in Resources */,
@@ -695,7 +680,6 @@
 				EE804DF21F40209C00F987CC /* ClsDispensaryMenu.swift in Sources */,
 				EEDE50A61F5913CB009088A6 /* StrainCommonUsageCell.swift in Sources */,
 				EE804DF51F40209C00F987CC /* ClsPhotoDetails.swift in Sources */,
-				EE56B47C1F4F9AAA006E1B83 /* DealsHeaderView.swift in Sources */,
 				EE804DDA1F40200400F987CC /* DispensaryDetailPhotoCell.swift in Sources */,
 				EE8FFC8D1F57B10400EF7578 /* StrainDeatilViewController.swift in Sources */,
 				EE804DD51F40200400F987CC /* DetailAttributeTableViewCell.swift in Sources */,

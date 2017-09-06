@@ -82,12 +82,14 @@ class DispensaryDetailViewController: UIViewController {
             objAttribute.attributeType = .Operation
             arrDetails.append(objAttribute)
             
-            var objReview = ClsReview()
+            let objReview = ClsReview()
             objReview.strReviewerName = "John Doe"
             objReview.strReviewTime = "36 months ago"
             objReview.fltReview = 4.0
             objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
             arrDetails.append(objReview)
+            
+            arrDetails.append(NSObject())
             
             objAttribute = ClsDispensaryDetailAttribute()
             objAttribute.strAttributeTitle = "Monday Magic"
@@ -141,6 +143,11 @@ class DispensaryDetailViewController: UIViewController {
         objTableHeaderView.headerDelegate = self
         
         
+    }
+    
+    
+    @IBAction func btnViewMenuTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "showMenu", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -259,6 +266,10 @@ extension DispensaryDetailViewController: UITableViewDataSource {
             objCell.img3.layer.masksToBounds = true
             objCell.img3.layer.cornerRadius = 3
             
+            return objCell
+        } else {
+        
+            let objCell = tableView.dequeueReusableCell(withIdentifier: "VerticalGap", for: indexPath)
             return objCell
         }
         

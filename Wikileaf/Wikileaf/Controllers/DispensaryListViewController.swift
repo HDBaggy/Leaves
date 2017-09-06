@@ -38,6 +38,7 @@ class DispensaryListViewController: UIViewController {
         tblDispensaries.rowHeight = UITableViewAutomaticDimension
         tblDispensaries.estimatedRowHeight = 60
         tblDispensaries.reloadData()
+
     }
     
     @IBAction func btnBackTapped(_ sender: Any) {
@@ -64,6 +65,7 @@ extension DispensaryListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let objCell =  tableView.dequeueReusableCell(withIdentifier: "DispensaryListCell", for: indexPath) as! DispensaryDetailView
+        objCell.selectionStyle = .none
         return objCell
     }
     

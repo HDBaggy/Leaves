@@ -12,9 +12,6 @@
         <array key="OpenSans-Bold.ttf">
             <string>OpenSans-Bold</string>
         </array>
-        <array key="OpenSans-Regular.ttf">
-            <string>OpenSans-Regular</string>
-        </array>
         <array key="OpenSans-SemiBold.ttf">
             <string>OpenSans-SemiBold</string>
         </array>
@@ -82,7 +79,7 @@
                         <constraint firstAttribute="width" constant="42" id="TTr-UX-Xsi"/>
                         <constraint firstAttribute="height" constant="16" id="zOy-Yz-7hH"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="12"/>
                     <color key="textColor" red="0.54901960780000003" green="0.54901960780000003" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -114,9 +111,17 @@
                         <constraint firstAttribute="width" constant="64" id="cT2-84-Itk"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ueo-el-1i2" userLabel="Seperator View">
+                    <rect key="frame" x="0.0" y="95" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1186322774" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ddH-JO-Hg3"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Ueo-el-1i2" firstAttribute="leading" secondItem="4eo-EY-1dj" secondAttribute="leading" id="0K3-f4-YHs"/>
                 <constraint firstAttribute="trailing" secondItem="i9p-Qb-Gpy" secondAttribute="trailing" constant="16" id="0hH-e4-g42"/>
                 <constraint firstItem="tEx-OZ-lkt" firstAttribute="top" secondItem="L8j-Se-L4M" secondAttribute="bottom" constant="2" id="30Y-qd-YPV"/>
                 <constraint firstAttribute="trailing" secondItem="97B-hQ-RQD" secondAttribute="trailing" constant="16" id="4Gm-Dn-caN"/>
@@ -131,7 +136,9 @@
                 <constraint firstItem="i9p-Qb-Gpy" firstAttribute="top" secondItem="L8j-Se-L4M" secondAttribute="top" id="U1q-Dk-uW9"/>
                 <constraint firstItem="csm-eF-G55" firstAttribute="top" secondItem="tEx-OZ-lkt" secondAttribute="top" id="WtL-vh-Caw"/>
                 <constraint firstItem="zck-wt-rwi" firstAttribute="leading" secondItem="4eo-EY-1dj" secondAttribute="leading" constant="16" id="Xpk-vj-nH1"/>
+                <constraint firstAttribute="trailing" secondItem="Ueo-el-1i2" secondAttribute="trailing" id="r5E-yM-HaQ"/>
                 <constraint firstItem="97B-hQ-RQD" firstAttribute="leading" secondItem="4Go-M9-y3g" secondAttribute="trailing" constant="9" id="sTb-E0-V6B"/>
+                <constraint firstAttribute="bottom" secondItem="Ueo-el-1i2" secondAttribute="bottom" id="sc7-tu-RzV"/>
                 <constraint firstItem="tEx-OZ-lkt" firstAttribute="leading" secondItem="zck-wt-rwi" secondAttribute="trailing" constant="16" id="tN9-aO-ICt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

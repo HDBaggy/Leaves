@@ -12,4 +12,5 @@ class ClsDispensaryItem: NSObject {
 
     var strItemName:String!
     var arrDispensary:[ClsDispensary]!
+    var strUnit:String = "1/8 OZ"
 }

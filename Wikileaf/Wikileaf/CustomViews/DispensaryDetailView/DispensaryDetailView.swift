@@ -23,8 +23,9 @@ class DispensaryDetailView: UITableViewCell {
         super.awakeFromNib()
         
         lblPrice.makeRoundedCorner()
-        imgDispensary.makeRoundedView()
+        imgDispensary.makeRoundedCorner()
         imgDispensary.addBorder()
+        ratingView.isEnabled = false
     }
     
     func configureCell(pobjDispensary:ClsDispensary){

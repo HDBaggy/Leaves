@@ -17,6 +17,7 @@ class GlobalSearchViewController: UIViewController {
 
         searchBoxContainer.addBorder()
         searchBoxContainer.makeRoundedCorner()
+        txtSearch.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
     }

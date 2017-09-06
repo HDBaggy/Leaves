@@ -8,12 +8,18 @@
 
 import UIKit
 
+typealias SectionBlock = () -> Void
+
 class DispensaryMenuHeaderView: UIView {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnUnit: UIButton!
+    var objSectionBlock:SectionBlock!
     
     @IBAction func btnUnitTapped(_ sender: Any) {
 
+        if objSectionBlock != nil {
+            objSectionBlock()
+        }
     }
 }

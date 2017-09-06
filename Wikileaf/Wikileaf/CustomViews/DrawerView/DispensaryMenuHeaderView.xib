@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uF-EP-tTj">
-                    <rect key="frame" x="16" y="16" width="269" height="24"/>
+                    <rect key="frame" x="16" y="16" width="235" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="2wn-au-9mJ"/>
                     </constraints>
@@ -32,10 +32,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-n1-oPM">
-                    <rect key="frame" x="301" y="12" width="52" height="32"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-n1-oPM">
+                    <rect key="frame" x="267" y="12" width="80" height="32"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="52" id="9GS-8H-lyI"/>
+                        <constraint firstAttribute="width" constant="80" id="9GS-8H-lyI"/>
                         <constraint firstAttribute="height" constant="32" id="hK7-gB-kbM"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
@@ -54,7 +54,7 @@
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" Arrow drop down" translatesAutoresizingMaskIntoConstraints="NO" id="002-Q0-3hO">
-                    <rect key="frame" x="355" y="25" width="10" height="5"/>
+                    <rect key="frame" x="349" y="25" width="10" height="5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="5" id="3X1-qS-2kr"/>
                         <constraint firstAttribute="width" constant="10" id="YLe-ir-hH4"/>
@@ -64,14 +64,14 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="7uF-EP-tTj" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2ki-NH-MJc"/>
+                <constraint firstItem="002-Q0-3hO" firstAttribute="leading" secondItem="kJf-n1-oPM" secondAttribute="trailing" constant="2" id="HS2-gJ-OQP"/>
                 <constraint firstItem="7uF-EP-tTj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="OUA-jk-t0p"/>
                 <constraint firstItem="kJf-n1-oPM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q9W-Lb-WiO"/>
                 <constraint firstItem="002-Q0-3hO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ux8-Eo-Zsv"/>
-                <constraint firstAttribute="trailing" secondItem="002-Q0-3hO" secondAttribute="trailing" constant="10" id="hOi-U4-f7T"/>
+                <constraint firstAttribute="trailing" secondItem="002-Q0-3hO" secondAttribute="trailing" constant="16" id="hOi-U4-f7T"/>
                 <constraint firstItem="kJf-n1-oPM" firstAttribute="leading" secondItem="7uF-EP-tTj" secondAttribute="trailing" constant="16" id="nCE-F2-Can"/>
                 <constraint firstAttribute="trailing" secondItem="nCU-rx-Lvu" secondAttribute="trailing" id="nTq-MY-427"/>
                 <constraint firstItem="nCU-rx-Lvu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sKb-gr-jv8"/>
-                <constraint firstAttribute="trailing" secondItem="kJf-n1-oPM" secondAttribute="trailing" constant="22" id="ypH-Fj-0yN"/>
                 <constraint firstAttribute="bottom" secondItem="nCU-rx-Lvu" secondAttribute="bottom" id="zxt-3L-2FV"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

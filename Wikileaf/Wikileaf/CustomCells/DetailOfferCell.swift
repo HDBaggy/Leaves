@@ -12,6 +12,7 @@ class DetailOfferCell: UITableViewCell {
 
     @IBOutlet weak var lblOfferDetail: UILabel!
     @IBOutlet weak var imgOfferIcon: UIImageView!
+    @IBOutlet weak var lblOfferTitle: UILabel!
     
     
     override func awakeFromNib() {
