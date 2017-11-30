@@ -2,332 +2,255 @@
 //  DispensaryDetailViewController.swift
 //  Wikileaf
 //
-//  Created by Harshit on 29/07/17.
+//  Created by Harshit on 10/10/17.
 //  Copyright © 2017 ZestyGuys. All rights reserved.
 //
 
 import UIKit
-import GSKStretchyHeaderView
+import TTTAttributedLabel
+import MXSegmentedPager
 import IDMPhotoBrowser
 
-class DispensaryDetailViewController: UIViewController {
+let kDispensaryDetailHeaderHeight:CGFloat = 309.0
+
+class DispensaryDetailViewController: MXSegmentedPagerController, TTTAttributedLabelDelegate, DispensaryDetailHeaderNewDelegate {
+
+    var objHeaderView:DispensaryDetailHederViewNew!
+    var fltHeaderHeight:CGFloat = kDispensaryDetailHeaderHeight
+    var arrMenu:[ClsMenu]!
+    var objCurrentDispensary:ClsDispensary!
     
-    @IBOutlet weak var tblDetails: UITableView!
-    var arrDetails:[AnyObject]!
-    var objTableHeaderView:DispensaryDetailHeaderView!
-    var objPhotoGalleryController:PhotoGalleryViewController!
     
+    /*
+ var objStrainListController:DispensariesStrainListViewController!
+ var objEdiblesController:DispensaryEdiblesViewController!
+ var objConcentratesController:DispensariesConcentratesController!
+ var objPhotoGalleryController:PhotoGalleryViewController!
+ var objDispensaryAboutController:TextualDetailViewController!
+ var objReviewController:DispensaryReviewListViewController!
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if  arrDetails == nil {
-            arrDetails = Array()
-        }
-        
-        self.initializeOnce()
-        getData()
-    }
-
-    func getData(){
-        
-        if arrDetails.count == 0 {
-            
-            var objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeName = "TYPE"
-            objAttribute.strAttributeValue = "Recretional Dispensary"
-            objAttribute.attributeType = .Detail
-            arrDetails.append(objAttribute)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeName = "CALL"
-            objAttribute.strAttributeValue = "+41 31 961 99 00"
-            objAttribute.strImageName = "ic_call_black_24px"
-            objAttribute.attributeType = .Detail
-            arrDetails.append(objAttribute)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeName = "ADDRESS"
-            objAttribute.strAttributeValue = "9509 Rainier Ave S,\nSeattle,\nWA 98118"
-            objAttribute.strImageName = "icn_go_button"
-            objAttribute.attributeType = .Detail
-            arrDetails.append(objAttribute)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeTitle = "HOURS"
-            objAttribute.strOperation = "SHOW ALL"
-            objAttribute.attributeType = .Operation
-            arrDetails.append(objAttribute)
-            
-            let objHours = ClsHours()
-            objHours.strBriefDetail = "Open Now until 9:00 PM"
-            arrDetails.append(objHours)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeTitle = "Photos"
-            objAttribute.strOperation = "VIEW ALL"
-            objAttribute.attributeType = .Operation
-            arrDetails.append(objAttribute)
-            
-            let objPhotoDetail = ClsPhotoDetails()
-            objPhotoDetail.arrPhotoNames = Array()
-            objPhotoDetail.arrPhotoNames.append("sample_image_1")
-            objPhotoDetail.arrPhotoNames.append("sample_image_2")
-            objPhotoDetail.arrPhotoNames.append("sample_image_3")
-            arrDetails.append(objPhotoDetail)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeTitle = "Reviews"
-            objAttribute.strOperation = "ALL REVIEWS"
-            objAttribute.attributeType = .Operation
-            arrDetails.append(objAttribute)
-            
-            let objReview = ClsReview()
-            objReview.strReviewerName = "John Doe"
-            objReview.strReviewTime = "36 months ago"
-            objReview.fltReview = 4.0
-            objReview.strReviewDetail = "I have to say, one of the best I have had! Turly tasty to smoke, and guaranteed to get you wherver you want to be. Ha Ha"
-            arrDetails.append(objReview)
-            
-            arrDetails.append(NSObject())
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeTitle = "Monday Magic"
-            objAttribute.strOperation = "ALL DEALS"
-            objAttribute.attributeType = .Operation
-            arrDetails.append(objAttribute)
-            
-            let objOffer = ClsOffer()
-            objOffer.strOffer = "CaptainForm is a five-star WordPress plugin that takes form building to another level. Forms were never a top priority for CMS developers. Basic functionality exists in most content management systems, however, implementation is limited."
-            objOffer.strIcon = "Share button"
-            arrDetails.append(objOffer)
-            
-            objAttribute = ClsDispensaryDetailAttribute()
-            objAttribute.strAttributeTitle = "About"
-            objAttribute.strOperation = "More"
-            objAttribute.attributeType = .Operation
-            arrDetails.append(objAttribute)
-            
-            let objDispensaryAbout = ClsAbout()
-            objDispensaryAbout.strAboutDetail = "Las Vegas has more than 100,000 hotel rooms to choose from. There is something for every budget and enough entertainment within walking distance to keep anyone occupied for months, never mind the usual weekend stay or honeymoon. There are few cities which have as many luxury hotels as Las Vegas."
-            arrDetails.append(objDispensaryAbout)
-            
-            tblDetails.reloadData()
-        }
+        initializeOnce()
     }
     
     func initializeOnce(){
         
-        tblDetails.rowHeight = UITableViewAutomaticDimension
-        tblDetails.estimatedRowHeight = 60
-        tblDetails.bounces = false
-        loadHeader()
-        tblDetails.contentSize = CGSize(width: 0, height: 1000)
-        tblDetails.bounces = true
+        arrMenu = Array()
         
+        initializeTopMenu()
+        configureHeader()
+        configureBottom()
+        getData()
+        trackAnalyticsScreen()
     }
     
-    func loadHeader(){
+    func trackAnalyticsScreen(){
         
-        objTableHeaderView = Bundle.main.loadNibNamed("DispensaryDetailHeaderView", owner: self, options: nil)?.first as! DispensaryDetailHeaderView
-        tblDetails.addSubview(objTableHeaderView)
-        
-        objTableHeaderView.expansionMode = .topOnly
-        objTableHeaderView.minimumContentHeight = 64
-        objTableHeaderView.maximumContentHeight = 350
-        //        objTableHeaderView.minimumContentHeight = 64
-        objTableHeaderView.contentShrinks = true
-        objTableHeaderView.contentExpands = true
-        objTableHeaderView.contentAnchor = .top
-        objTableHeaderView.setMaximumContentHeight(350, resetAnimated: false)
-        objTableHeaderView.headerDelegate = self
-        
-        
+//        let objGoogleTracker = GAI.sharedInstance().defaultTracker as GAITracker
+//        objGoogleTracker.set(kGAIScreenName, value: kDispDetailScreen)
     }
     
     
-    @IBAction func btnViewMenuTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "showMenu", sender: nil)
+    func initializeTopMenu() {
+        
+        arrMenu = Array()
+        
+        var objMenu = ClsMenu()
+        objMenu.strMenuName = "Menu"
+        objMenu.strControllerIdentifier = "DispensaryMenuController"
+        arrMenu.append(objMenu)
+        
+        objMenu = ClsMenu()
+        objMenu.strMenuName = "Reviews"
+        objMenu.strControllerIdentifier = "RatingsRootViewController"
+        arrMenu.append(objMenu)
+        
+        objMenu = ClsMenu()
+        objMenu.strMenuName = "Photos"
+        objMenu.strControllerIdentifier = "PhotoGalleryViewController"
+        arrMenu.append(objMenu)
+        
+        objMenu = ClsMenu()
+        objMenu.strMenuName = "Deals"
+        objMenu.strControllerIdentifier = "DealsViewController"
+        arrMenu.append(objMenu)
+        
+        objMenu = ClsMenu()
+        objMenu.strMenuName = "About"
+        objMenu.strControllerIdentifier = "AboutViewController"
+        arrMenu.append(objMenu)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func configureBottom(){
         
-        if segue.identifier == "showPhotos" {
+        self.segmentedPager.segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocation.down
+        self.segmentedPager.segmentedControl.backgroundColor = UIColor.white
+        self.segmentedPager.segmentedControl.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        self.segmentedPager.segmentedControl.selectedTitleTextAttributes = [NSForegroundColorAttributeName:UIColor.black]
+        self.segmentedPager.segmentedControl.selectionStyle = HMSegmentedControlSelectionStyle.fullWidthStripe
+        self.segmentedPager.segmentedControl.selectionIndicatorHeight = 3
+        self.segmentedPager.segmentedControl.titleTextAttributes = [NSForegroundColorAttributeName:UIColor(red: 66/255, green:66/255, blue: 66/255, alpha: 1.0),NSFontAttributeName: UIFont(name: "Helvetica", size: 14)]
+        self.segmentedPager.segmentedControl.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        self.segmentedPager.segmentedControl.selectionIndicatorColor = UIColor(red: 35/255, green: 207/255, blue: 95/255, alpha: 1)
+        self.segmentedPager.segmentedControlEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+       // addSeperatorLines()
+    }
+    
+    // MARK: - MXSegmentPager DataSource
+    
+    override func heightForSegmentedControlInSegmentedPager(segmentedPager: MXSegmentedPager) -> CGFloat {
+        return 43
+    }
+    
+    override func numberOfPagesInSegmentedPager(segmentedPager: MXSegmentedPager) -> Int {
+        return arrMenu.count
+    }
+    
+    override func segmentedPager(segmentedPager: MXSegmentedPager, titleForSectionAtIndex index: Int) -> String {
+        let objMenu = arrMenu[index]
+        return objMenu.strMenuName
+    }
+    
+    override func segmentedPager(segmentedPager: MXSegmentedPager, segueIdentifierForPageAtIndex index: Int) -> String {
+        return "showSampleText"
+    }
+    
+    override func segmentedPager(segmentedPager: MXSegmentedPager, viewControllerForPageAtIndex index: Int) -> UIViewController {
+        
+        let objMenu = arrMenu[index]
+        
+//        let objStoryboard = UIStoryboard(name: R.storyboard.dispensaries.name, bundle: nil)
+        let objStoryboard = self.storyboard
+        var objController:UIViewController!
+        
+        if index == 0 {
             
-            let objPhotosController = segue.destination as! PhotoGalleryViewController
-            let arrTmpPhotos = sender as! [ClsPhoto]
-            objPhotosController.arrImages = arrTmpPhotos
+            objController = objStoryboard.instantiateViewControllerWithIdentifier(objMenu.strControllerIdentifier)
+            objStrainListController = objController as! DispensariesStrainListViewController
+            objStrainListController.objCurrentDispensary = objCurrentDispensary
             
-            OperationQueue.main.addOperation({
+            if objCurrentDispensary.arrStrainCategory != nil {
+                objStrainListController.updateList(objCurrentDispensary.arrStrainCategory)
+            }
+            
+        } else if index == 1 {
+            
+            objController = objStoryboard.instantiateViewControllerWithIdentifier(objMenu.strControllerIdentifier)
+            objEdiblesController = objController as! DispensaryEdiblesViewController
+            objEdiblesController.objCurrentDispensary = objCurrentDispensary
+            
+        } else if index == 2 {
+            
+            objController = objStoryboard.instantiateViewControllerWithIdentifier(objMenu.strControllerIdentifier)
+            objConcentratesController = objController as! DispensariesConcentratesController
+            objConcentratesController.objCurrentDispensary = objCurrentDispensary
+            
+        } else if index == 3 {
+            
+            let objReviewStoryBoard = UIStoryboard(name: R.storyboard.reviewList.name, bundle: nil)
+            objController = objReviewStoryBoard.instantiateViewControllerWithIdentifier(R.storyboard.reviewList.dispensaryReviewListViewController.identifier) as! DispensaryReviewListViewController
+            objReviewController = objController as! DispensaryReviewListViewController
+            objReviewController.objCurrentDispensary = objCurrentDispensary
+            
+        } else if index == 4 {
+            
+            objController = objStoryboard.instantiateViewControllerWithIdentifier(objMenu.strControllerIdentifier)
+            objPhotoGalleryController = objController as! PhotoGalleryViewController
+            objPhotoGalleryController.objCurrentDispensary = objCurrentDispensary
+            
+        } else if index == 5 {
+            
+            objController = objStoryboard.instantiateViewControllerWithIdentifier(objMenu.strControllerIdentifier)
+            objDispensaryAboutController = objController as! TextualDetailViewController
+            
+            if objCurrentDispensary.strOverview != nil {
                 
-                objPhotosController.updateList(parrPhotos: arrTmpPhotos)
-            })
+                objDispensaryAboutController.strDescription = objCurrentDispensary.strOverview.html2String
+            }
         }
+        return objController
+    }
+    
+    
+    func getData(){
+
+        /*
+        let objManager = WLManager.sharedInstance()
+        
+        Helper.showLoading()
+
+        objManager.getDispensaryFullDetails(objCurrentDispensary) { (result, success) in
+            
+            if success == true {
+                
+                if self.objCurrentDispensary.arrStrainCategory != nil {
+                    self.objStrainListController?.updateList(self.objCurrentDispensary.arrStrainCategory)
+                }
+                
+                self.objEdiblesController?.updateList(self.objCurrentDispensary.arrEdibles)
+                self.objConcentratesController?.updateList(self.objCurrentDispensary.arrConcentrates)
+                self.objPhotoGalleryController?.updateList(self.objCurrentDispensary.arrPhotos)
+                
+                let strTmpReview = "\(self.objCurrentDispensary.fltAverageReview)"
+                self.objHeaderView.configureReviewView(self.objCurrentDispensary.intTotalReviews, pstrAverageReview: strTmpReview)
+                self.objHeaderView.configureHeader()
+                self.objHeaderView.lblAddress.text = self.objCurrentDispensary.strFullAddress
+                self.objHeaderView.lblDetail1.text = self.objCurrentDispensary.getStoreTypeText()
+                self.objHeaderView.lblDetail1.textColor = self.objCurrentDispensary.objColor
+                self.objReviewController?.updateList(self.objCurrentDispensary.arrReviews)
+                
+                let strTmpStatusPrefix = (self.objCurrentDispensary.isOpen == true) ?  "Open Now - " : "Closed Now - "
+                self.objHeaderView.lblTiming.text = strTmpStatusPrefix + self.objCurrentDispensary.strStartTime + " to " + self.objCurrentDispensary.strEndTime
+            }
+            
+            Helper.hideLoading()
+        } */
+    }
+    
+    func configureHeader(){
+        
+        objHeaderView = Bundle.main.loadNibNamed("DispensaryDetailHederViewNew", owner: self, options: nil)![0] as! DispensaryDetailHederViewNew
+        
+
+        
+        self.segmentedPager.parallaxHeader.view = objHeaderView
+        self.segmentedPager.parallaxHeader.mode = .top
+        self.segmentedPager.parallaxHeader.height = fltHeaderHeight
+        self.segmentedPager.parallaxHeader.minimumHeight = 70
+        objHeaderView.dispensaryHeaderDelegate = self
+//        objHeaderView.objCurrentDispensary = objCurrentDispensary
+    }
+
+    // MARK: - Dispensary detail header view delegate
+    
+    func goBack() {
+        
+    }
+    
+    func shareDispensary(pobjDispensary: ClsDispensary) {
+        
+    }
+    
+    func callDispensary(pobjDispensary: ClsDispensary) {
+        
+    }
+    
+    func findNearByDispensary(pobjDispensary: ClsDispensary) {
+        
+    }
+    
+    func writeReviewForDispensary(pobjDispensary: ClsDispensary) {
+        
+    }
+    
+    func switchToReviewTab() {
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
-
-extension DispensaryDetailViewController: FlexibleHeaderDelegate {
-    
-    func headerShareTapped() {
-        
-    }
-    
-    func headerGoBackTapped() {
-        
-        self.navigationController?.popViewController(animated: true)
-    }
-}
-
-extension DispensaryDetailViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrDetails.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let objTmpDetail = arrDetails[indexPath.row]
-        
-        if objTmpDetail.isKind(of: ClsDispensaryDetailAttribute.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsDispensaryDetailAttribute
-            
-            if objDetail.attributeType == .Detail {
-                
-                let objCell = tableView.dequeueReusableCell(withIdentifier: "DispsnearyDetailAttributeCell", for: indexPath) as! DetailAttributeCell
-                objCell.lblAttributeName?.text = objDetail.strAttributeName
-                objCell.lblAttributeValue?.text = objDetail.strAttributeValue
-                objCell.imgAttributeIcon.image = UIImage(named: objDetail.strImageName)
-                return objCell
-            }
-            
-            if objDetail.attributeType == .Operation {
-                
-                let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailTitleCell", for: indexPath) as! DetailTitleCell
-                objCell.lblTitleName.text = objDetail.strAttributeTitle
-                objCell.lblOperationName.text = objDetail.strOperation
-                return objCell
-            }
-            
-        } else if objTmpDetail.isKind(of: ClsOffer.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsOffer
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailOfferCell", for: indexPath) as! DetailOfferCell
-            objCell.lblOfferDetail.text = objDetail.strOffer
-            objCell.imgOfferIcon?.image = UIImage(named: objDetail.strIcon)
-            return objCell
-            
-        } else if objTmpDetail.isKind(of: ClsReview.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsReview
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDeatilReviewCell", for: indexPath) as! DetailReviewCell
-            objCell.configureCell(pobjRating: objDetail)
-            return objCell
-            
-        } else if objTmpDetail.isKind(of: ClsAbout.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsAbout
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailDescriptionCell", for: indexPath) as! DetailDescriptionCell
-            objCell.lblDescription.text = objDetail.strAboutDetail
-            return objCell
-            
-        } else if objTmpDetail.isKind(of: ClsHours.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsHours
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailHoursDescriptionCell", for: indexPath) as! DetailDescriptionCell
-            objCell.lblDescription.text = objDetail.strBriefDetail
-            return objCell
-            
-        } else if objTmpDetail.isKind(of: ClsPhotoDetails.self) == true {
-            
-            let objDetail = objTmpDetail as! ClsPhotoDetails
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailPhotoCell", for: indexPath) as! DispensaryDetailPhotoCell
-            //            objCell.lblDescription.text = objDetail.strBriefDetail
-            objCell.img1.image = UIImage(named: objDetail.arrPhotoNames[0])
-            objCell.img2.image = UIImage(named: objDetail.arrPhotoNames[1])
-            objCell.img3.image = UIImage(named: objDetail.arrPhotoNames[2])
-            
-            objCell.img1.layer.masksToBounds = true
-            objCell.img1.layer.cornerRadius = 3
-            
-            objCell.img2.layer.masksToBounds = true
-            objCell.img2.layer.cornerRadius = 3
-            
-            objCell.img3.layer.masksToBounds = true
-            objCell.img3.layer.cornerRadius = 3
-            
-            return objCell
-        } else {
-        
-            let objCell = tableView.dequeueReusableCell(withIdentifier: "VerticalGap", for: indexPath)
-            return objCell
-        }
-        
-        return tableView.dequeueReusableCell(withIdentifier: "DispensaryDetailTitleCell", for: indexPath) as! DetailTitleCell
-    }
-}
-
-extension DispensaryDetailViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return max(60, UITableViewAutomaticDimension)
-        return UITableViewAutomaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.reloadRows(at: [indexPath], with: .fade)
-        
-        let objTmpDetail = arrDetails[indexPath.row]
-        
-        if objTmpDetail.isKind(of: ClsReview.self) == true {
-            
-            self.performSegue(withIdentifier: "showRating", sender: nil)
-            
-        } else if objTmpDetail.isKind(of: ClsOffer.self) == true {
-            
-            self.performSegue(withIdentifier: "showOffers", sender: nil)
-            
-        } else if objTmpDetail.isKind(of: ClsAbout.self) == true {
-            
-            self.performSegue(withIdentifier: "showAbout", sender: nil)
-            
-        } else if objTmpDetail.isKind(of: ClsPhotoDetails.self) {
-            
-            
-            //            var arrPhotoUrl:[NSURL] = Array()
-            var arrPhoto:[ClsPhoto] = Array()
-            
-            for _ in 1...10 {
-                
-                //                arrPhotoUrl.append(NSURL(string: "https://www.w3schools.com/css/img_fjords.jpg")!)
-                
-                let objPhoto = ClsPhoto()
-                objPhoto.strImageUrl = "https://www.w3schools.com/css/img_fjords.jpg"
-                arrPhoto.append(objPhoto)
-            }
-            //            let arrPhotos = IDMPhoto.photos(withURLs: arrPhotoUrl)
-            //            let objPhotoBrowserController = IDMPhotoBrowser(photos: arrPhotos)
-            //            objPhotoBrowserController?.setInitialPageIndex(0)
-            //self.presentViewController(objPhotoBrowserController!, animated: true, completion: nil)
-            //self.present(objPhotoBrowserController!, animated: true, completion: nil)
-            
-            self.performSegue(withIdentifier: "showPhotos", sender: arrPhoto)
-            
-        } else {
-            
-            self.performSegue(withIdentifier: "showMenu", sender: nil)
-        }
-    }
-}
-

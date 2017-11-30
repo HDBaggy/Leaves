@@ -11,6 +11,8 @@
 		EE1AA18D1F4993B600B960E6 /* RatingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1AA18C1F4993B600B960E6 /* RatingListViewController.swift */; };
 		EE1AA18F1F4A3E6A00B960E6 /* RatingOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1AA18E1F4A3E6A00B960E6 /* RatingOverviewCell.swift */; };
 		EE1AA1911F4A85BB00B960E6 /* RatingsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1AA1901F4A85BB00B960E6 /* RatingsRootViewController.swift */; };
+		EE25385B1F6061D2004DF6F5 /* WriteReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE25385A1F6061D2004DF6F5 /* WriteReviewCell.swift */; };
+		EE25385D1F60628F004DF6F5 /* ClsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE25385C1F60628F004DF6F5 /* ClsOperation.swift */; };
 		EE3F74DF1F30183F009AFE4A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D51F30183F009AFE4A /* OpenSans-Bold.ttf */; };
 		EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D61F30183F009AFE4A /* OpenSans-BoldItalic.ttf */; };
 		EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE3F74D71F30183F009AFE4A /* OpenSans-ExtraBold.ttf */; };
@@ -28,6 +30,10 @@
 		EE56B4861F4FDE1F006E1B83 /* ClsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4851F4FDE1F006E1B83 /* ClsPhoto.swift */; };
 		EE56B4881F4FDEB8006E1B83 /* PhotoGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4871F4FDEB8006E1B83 /* PhotoGalleryCell.swift */; };
 		EE56B48A1F4FE772006E1B83 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE56B4891F4FE772006E1B83 /* AboutViewController.swift */; };
+		EE5E2BA71F8C61EE00C81740 /* DispensaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E2BA61F8C61EE00C81740 /* DispensaryDetailViewController.swift */; };
+		EE5E2BAC1F8C634C00C81740 /* ClsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E2BAB1F8C634C00C81740 /* ClsMenu.swift */; };
+		EE5E2BAE1F8C6B6100C81740 /* DispensaryDetailHeaderViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E2BAD1F8C6B6100C81740 /* DispensaryDetailHeaderViewNew.swift */; };
+		EE5E2BB01F8C6B7300C81740 /* DispensaryDetailHeaderViewNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5E2BAF1F8C6B7300C81740 /* DispensaryDetailHeaderViewNew.xib */; };
 		EE731E7B1F560DC9005019D8 /* DispensaryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */; };
 		EE731E7D1F560DD5005019D8 /* DispensaryDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */; };
 		EE804DCA1F401F5700F987CC /* DispensaryDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DC81F401F5700F987CC /* DispensaryDetailHeaderView.swift */; };
@@ -40,7 +46,6 @@
 		EE804DDA1F40200400F987CC /* DispensaryDetailPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DD31F40200400F987CC /* DispensaryDetailPhotoCell.swift */; };
 		EE804DDB1F40200400F987CC /* DispensaryMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DD41F40200400F987CC /* DispensaryMenuCell.swift */; };
 		EE804DDE1F40203500F987CC /* DrawerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DDD1F40203500F987CC /* DrawerDetailCell.swift */; };
-		EE804DE21F40205500F987CC /* DispensaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DDF1F40205500F987CC /* DispensaryDetailViewController.swift */; };
 		EE804DE31F40205500F987CC /* DispensaryMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DE01F40205500F987CC /* DispensaryMenuController.swift */; };
 		EE804DE41F40205500F987CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DE11F40205500F987CC /* ViewController.swift */; };
 		EE804DEE1F40209C00F987CC /* ClsAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE804DE51F40209C00F987CC /* ClsAbout.swift */; };
@@ -73,6 +78,8 @@
 		EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */; };
 		EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */; };
 		EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */; };
+		EE9D4DFB1F89D06400EF207C /* DispensaryDetailView1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9D4DFA1F89D06400EF207C /* DispensaryDetailView1.storyboard */; };
+		EE9D4DFD1F89D7BD00EF207C /* DispensaryDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9D4DFC1F89D7BD00EF207C /* DispensaryDetailView.storyboard */; };
 		EEDE50A61F5913CB009088A6 /* StrainCommonUsageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE50A51F5913CB009088A6 /* StrainCommonUsageCell.swift */; };
 		EEDE50A81F591607009088A6 /* ClsStrainUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE50A71F591607009088A6 /* ClsStrainUsage.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +108,8 @@
 		EE1AA18C1F4993B600B960E6 /* RatingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingListViewController.swift; sourceTree = "<group>"; };
 		EE1AA18E1F4A3E6A00B960E6 /* RatingOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingOverviewCell.swift; sourceTree = "<group>"; };
 		EE1AA1901F4A85BB00B960E6 /* RatingsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingsRootViewController.swift; sourceTree = "<group>"; };
+		EE25385A1F6061D2004DF6F5 /* WriteReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteReviewCell.swift; sourceTree = "<group>"; };
+		EE25385C1F60628F004DF6F5 /* ClsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsOperation.swift; sourceTree = "<group>"; };
 		EE3F74D51F30183F009AFE4A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		EE3F74D61F30183F009AFE4A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		EE3F74D71F30183F009AFE4A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -118,6 +127,10 @@
 		EE56B4851F4FDE1F006E1B83 /* ClsPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsPhoto.swift; sourceTree = "<group>"; };
 		EE56B4871F4FDEB8006E1B83 /* PhotoGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCell.swift; sourceTree = "<group>"; };
 		EE56B4891F4FE772006E1B83 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		EE5E2BA61F8C61EE00C81740 /* DispensaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryDetailViewController.swift; sourceTree = "<group>"; };
+		EE5E2BAB1F8C634C00C81740 /* ClsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClsMenu.swift; sourceTree = "<group>"; };
+		EE5E2BAD1F8C6B6100C81740 /* DispensaryDetailHeaderViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispensaryDetailHeaderViewNew.swift; sourceTree = "<group>"; };
+		EE5E2BAF1F8C6B7300C81740 /* DispensaryDetailHeaderViewNew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DispensaryDetailHeaderViewNew.xib; sourceTree = "<group>"; };
 		EE731E7A1F560DC9005019D8 /* DispensaryDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailView.swift; sourceTree = "<group>"; };
 		EE731E7C1F560DD5005019D8 /* DispensaryDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryDetailView.xib; sourceTree = "<group>"; };
 		EE804DC81F401F5700F987CC /* DispensaryDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -130,7 +143,6 @@
 		EE804DD31F40200400F987CC /* DispensaryDetailPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailPhotoCell.swift; sourceTree = "<group>"; };
 		EE804DD41F40200400F987CC /* DispensaryMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuCell.swift; sourceTree = "<group>"; };
 		EE804DDD1F40203500F987CC /* DrawerDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerDetailCell.swift; sourceTree = "<group>"; };
-		EE804DDF1F40205500F987CC /* DispensaryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryDetailViewController.swift; sourceTree = "<group>"; };
 		EE804DE01F40205500F987CC /* DispensaryMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuController.swift; sourceTree = "<group>"; };
 		EE804DE11F40205500F987CC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE804DE51F40209C00F987CC /* ClsAbout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsAbout.swift; sourceTree = "<group>"; };
@@ -169,6 +181,8 @@
 		EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
 		EE92F98C1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispensaryMenuHeaderView.swift; sourceTree = "<group>"; };
 		EE92F98D1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispensaryMenuHeaderView.xib; sourceTree = "<group>"; };
+		EE9D4DFA1F89D06400EF207C /* DispensaryDetailView1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DispensaryDetailView1.storyboard; sourceTree = "<group>"; };
+		EE9D4DFC1F89D7BD00EF207C /* DispensaryDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DispensaryDetailView.storyboard; sourceTree = "<group>"; };
 		EEDE50A51F5913CB009088A6 /* StrainCommonUsageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrainCommonUsageCell.swift; sourceTree = "<group>"; };
 		EEDE50A71F591607009088A6 /* ClsStrainUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClsStrainUsage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +274,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		EE5E2BA81F8C62A900C81740 /* DispensaryDetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EE5E2BAD1F8C6B6100C81740 /* DispensaryDetailHeaderViewNew.swift */,
+				EE5E2BAF1F8C6B7300C81740 /* DispensaryDetailHeaderViewNew.xib */,
+			);
+			path = DispensaryDetailHeaderView;
+			sourceTree = "<group>";
+		};
 		EE731E791F560DBA005019D8 /* DispensaryDetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,7 +309,6 @@
 				EE56B4831F4FDDAE006E1B83 /* PhotoGalleryViewController.swift */,
 				EE1AA1891F4993A800B960E6 /* RatingController */,
 				EE92F9891F47DF5000ABAAAF /* DrawerViewController.swift */,
-				EE804DDF1F40205500F987CC /* DispensaryDetailViewController.swift */,
 				EE804DE01F40205500F987CC /* DispensaryMenuController.swift */,
 				EE804DE11F40205500F987CC /* ViewController.swift */,
 				EE56B4781F4F9A78006E1B83 /* DealsViewController.swift */,
@@ -294,6 +316,7 @@
 				EE8FFC881F5620CD00EF7578 /* DispensaryListViewController.swift */,
 				EE8FFC8A1F5634C900EF7578 /* GlobalSearchViewController.swift */,
 				EE8FFC8C1F57B10400EF7578 /* StrainDeatilViewController.swift */,
+				EE5E2BA61F8C61EE00C81740 /* DispensaryDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,6 +335,7 @@
 				EE804DD41F40200400F987CC /* DispensaryMenuCell.swift */,
 				EE8FFC961F57C95500EF7578 /* StrainGraphCell.swift */,
 				EEDE50A51F5913CB009088A6 /* StrainCommonUsageCell.swift */,
+				EE25385A1F6061D2004DF6F5 /* WriteReviewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -331,6 +355,8 @@
 				EE804DED1F40209C00F987CC /* ClsReview.swift */,
 				EE56B47F1F4FC5C9006E1B83 /* ClsOfferSection.swift */,
 				EEDE50A71F591607009088A6 /* ClsStrainUsage.swift */,
+				EE25385C1F60628F004DF6F5 /* ClsOperation.swift */,
+				EE5E2BAB1F8C634C00C81740 /* ClsMenu.swift */,
 			);
 			path = "Model Class";
 			sourceTree = "<group>";
@@ -338,6 +364,7 @@
 		EE804DFC1F40210200F987CC /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				EE5E2BA81F8C62A900C81740 /* DispensaryDetailHeaderView */,
 				EE731E791F560DBA005019D8 /* DispensaryDetailView */,
 				EE92F98B1F47EA4500ABAAAF /* DrawerView */,
 				EE804DFD1F40210200F987CC /* AnnotationView */,
@@ -403,6 +430,8 @@
 				EE8277191F23868F006CB38E /* LaunchScreen.storyboard */,
 				EE82771C1F23868F006CB38E /* Info.plist */,
 				EE56B4811F4FCC4B006E1B83 /* UIView+Extensions.swift */,
+				EE9D4DFA1F89D06400EF207C /* DispensaryDetailView1.storyboard */,
+				EE9D4DFC1F89D7BD00EF207C /* DispensaryDetailView.storyboard */,
 			);
 			path = Wikileaf;
 			sourceTree = "<group>";
@@ -552,6 +581,7 @@
 				EE8FFC931F57BB6A00EF7578 /* StrainGraphView.xib in Resources */,
 				EE3F74E21F30183F009AFE4A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				EE3F74E71F30183F009AFE4A /* OpenSans-SemiBold.ttf in Resources */,
+				EE9D4DFD1F89D7BD00EF207C /* DispensaryDetailView.storyboard in Resources */,
 				EE804DCB1F401F5700F987CC /* DispensaryDetailHeaderView.xib in Resources */,
 				EE3F74E51F30183F009AFE4A /* OpenSans-LightItalic.ttf in Resources */,
 				EE3F74E31F30183F009AFE4A /* OpenSans-Italic.ttf in Resources */,
@@ -561,11 +591,13 @@
 				EE92F98F1F47EA4500ABAAAF /* DispensaryMenuHeaderView.xib in Resources */,
 				EE3F74E11F30183F009AFE4A /* OpenSans-ExtraBold.ttf in Resources */,
 				EE3F74E01F30183F009AFE4A /* OpenSans-BoldItalic.ttf in Resources */,
+				EE9D4DFB1F89D06400EF207C /* DispensaryDetailView1.storyboard in Resources */,
 				EE3F74E81F30183F009AFE4A /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				EE8277181F23868F006CB38E /* Assets.xcassets in Resources */,
 				EE8277161F23868F006CB38E /* Main.storyboard in Resources */,
 				EE3F74E41F30183F009AFE4A /* OpenSans-Light.ttf in Resources */,
 				EE3F74E61F30183F009AFE4A /* OpenSans-Regular.ttf in Resources */,
+				EE5E2BB01F8C6B7300C81740 /* DispensaryDetailHeaderViewNew.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,11 +633,17 @@
 				"${BUILT_PRODUCTS_DIR}/EXPhotoViewer/EXPhotoViewer.framework",
 				"${BUILT_PRODUCTS_DIR}/GSKStretchyHeaderView/GSKStretchyHeaderView.framework",
 				"${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/IDMPhotoBrowser/IDMPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MXPagerView/MXPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/MXParallaxHeader/MXParallaxHeader.framework",
+				"${BUILT_PRODUCTS_DIR}/MXSegmentedPager/MXSegmentedPager.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/TimeZoneLocate/TimeZoneLocate.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -618,11 +656,17 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EXPhotoViewer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GSKStretchyHeaderView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HCSStarRatingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDMPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXParallaxHeader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MXSegmentedPager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TimeZoneLocate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,8 +717,8 @@
 				EE92F98E1F47EA4500ABAAAF /* DispensaryMenuHeaderView.swift in Sources */,
 				EE1AA1911F4A85BB00B960E6 /* RatingsRootViewController.swift in Sources */,
 				EE56B4791F4F9A78006E1B83 /* DealsViewController.swift in Sources */,
+				EE5E2BA71F8C61EE00C81740 /* DispensaryDetailViewController.swift in Sources */,
 				EE56B4881F4FDEB8006E1B83 /* PhotoGalleryCell.swift in Sources */,
-				EE804DE21F40205500F987CC /* DispensaryDetailViewController.swift in Sources */,
 				EE8FFC951F57BB7500EF7578 /* StrainGraphView.swift in Sources */,
 				EE804DF61F40209C00F987CC /* ClsReview.swift in Sources */,
 				EE804DF21F40209C00F987CC /* ClsDispensaryMenu.swift in Sources */,
@@ -692,9 +736,11 @@
 				EE1AA18F1F4A3E6A00B960E6 /* RatingOverviewCell.swift in Sources */,
 				EE8FFC8B1F5634C900EF7578 /* GlobalSearchViewController.swift in Sources */,
 				EE92F98A1F47DF5000ABAAAF /* DrawerViewController.swift in Sources */,
+				EE25385D1F60628F004DF6F5 /* ClsOperation.swift in Sources */,
 				EE804DD61F40200400F987CC /* DetailDescriptionCell.swift in Sources */,
 				EE804DD71F40200400F987CC /* DetailOfferCell.swift in Sources */,
 				EE56B4861F4FDE1F006E1B83 /* ClsPhoto.swift in Sources */,
+				EE5E2BAE1F8C6B6100C81740 /* DispensaryDetailHeaderViewNew.swift in Sources */,
 				EE8277111F23868F006CB38E /* AppDelegate.swift in Sources */,
 				EE8FFC8F1F57B4A700EF7578 /* StrainDetailHeaderView.swift in Sources */,
 				EE56B4821F4FCC4B006E1B83 /* UIView+Extensions.swift in Sources */,
@@ -703,12 +749,14 @@
 				EEDE50A81F591607009088A6 /* ClsStrainUsage.swift in Sources */,
 				EE8FFC891F5620CD00EF7578 /* DispensaryListViewController.swift in Sources */,
 				EE56B4841F4FDDAE006E1B83 /* PhotoGalleryViewController.swift in Sources */,
+				EE25385B1F6061D2004DF6F5 /* WriteReviewCell.swift in Sources */,
 				EE804DDB1F40200400F987CC /* DispensaryMenuCell.swift in Sources */,
 				EE804E021F40210200F987CC /* PlaceAnnotationView.swift in Sources */,
 				EE731E7B1F560DC9005019D8 /* DispensaryDetailView.swift in Sources */,
 				EE56B4801F4FC5C9006E1B83 /* ClsOfferSection.swift in Sources */,
 				EE1AA18D1F4993B600B960E6 /* RatingListViewController.swift in Sources */,
 				EE804DEF1F40209C00F987CC /* ClsDetail.swift in Sources */,
+				EE5E2BAC1F8C634C00C81740 /* ClsMenu.swift in Sources */,
 				EE804DD91F40200400F987CC /* DetailTitleCell.swift in Sources */,
 				EE804DEE1F40209C00F987CC /* ClsAbout.swift in Sources */,
 				EE56B48A1F4FE772006E1B83 /* AboutViewController.swift in Sources */,

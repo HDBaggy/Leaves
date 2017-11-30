@@ -11,6 +11,7 @@ import GSKStretchyHeaderView
 
 class StrainDetailHeaderView: GSKStretchyHeaderView {
 
+    @IBOutlet weak var lblSmallTitle: UILabel!
     @IBOutlet weak var imgStrain: UIImageView!
     @IBOutlet weak var lblStrainTitle: UILabel!
     var headerDelegate:FlexibleHeaderDelegate!
@@ -21,6 +22,7 @@ class StrainDetailHeaderView: GSKStretchyHeaderView {
         
         super.awakeFromNib()
         imgStrain.addBorderForImageview()
+        lblSmallTitle.alpha = 0
     }
     
     // MARK: - Button Tap Events
@@ -45,9 +47,12 @@ class StrainDetailHeaderView: GSKStretchyHeaderView {
             
             imgStrain.alpha = 0
             lblStrainTitle.alpha = 0
+            lblSmallTitle.alpha = 1 - lblStrainTitle.alpha
+
             
         } else {
             
+            lblSmallTitle.alpha = 0
             lblStrainTitle.alpha = stretchFactor
             lblStrainTitle.alpha = stretchFactor
             lblStrainTitle.frame = CGRect(x: lblStrainTitle.frame.origin.x, y: lblStrainTitle.frame.origin.y  , width: lblStrainTitle.frame.size.width, height: lblStrainTitle.frame.size.height)

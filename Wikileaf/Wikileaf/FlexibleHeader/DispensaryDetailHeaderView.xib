@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
         <array key="OpenSans-SemiBold.ttf">
             <string>OpenSans-SemiBold</string>
         </array>
@@ -20,6 +23,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A4-N1-8Ba" userLabel="Seperator View">
+                    <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1186322774" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="IDC-J7-Nw3"/>
+                    </constraints>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="w2w-JF-aDq" userLabel="imgBackground">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +91,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have a Heart Belltown" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6B-Af-P4S" userLabel="lblDispensaryTitle">
                     <rect key="frame" x="57" y="190" width="261" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="24"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -101,8 +111,25 @@
                         <action selector="btnShareTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="8gM-R2-Htd"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have a Heart Belltown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flg-AY-E18">
+                    <rect key="frame" x="66" y="30" width="244" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="244" id="8Sy-Oh-fVG"/>
+                        <constraint firstAttribute="height" constant="24" id="sct-38-0hB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.076514385640621185" green="0.1899997889995575" blue="0.2979884147644043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="flg-AY-E18" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="L3x-RF-L4U"/>
+                <constraint firstItem="7A4-N1-8Ba" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NRn-Od-CPJ"/>
+                <constraint firstItem="7A4-N1-8Ba" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="XI9-Rx-YpS"/>
+                <constraint firstItem="flg-AY-E18" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="XKS-4f-EGh"/>
+                <constraint firstAttribute="trailing" secondItem="7A4-N1-8Ba" secondAttribute="trailing" id="hAy-33-RFb"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -110,6 +137,7 @@
                 <outlet property="imgDispensary" destination="C2h-fX-tDg" id="fW9-a0-AKL"/>
                 <outlet property="imgFilter" destination="7P6-Yi-uHu" id="12Q-G0-pPD"/>
                 <outlet property="lblDispensaryTitle" destination="t6B-Af-P4S" id="U93-Ni-Plo"/>
+                <outlet property="lblSmallTitle" destination="flg-AY-E18" id="CbQ-Bc-vPg"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="-173"/>
         </view>
